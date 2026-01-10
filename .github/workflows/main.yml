@@ -1,0 +1,17 @@
+name: MarkBind Deploy
+
+on: [push]
+
+jobs: 
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    name: Build & Deploy to GitHub Pages
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm i -g markbind-cli
+      - run: markbind deploy --ci
