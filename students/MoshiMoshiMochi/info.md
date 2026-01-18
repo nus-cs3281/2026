@@ -3,4 +3,4 @@
 <span id="github">https://github.com/MoshiMoshiMochi</span>
 
 <!-- [CS3281: Give your NUS-OSS project][CS3282: give your internal and external projects related to the module] -->
-<span id="projects">[MarkBind]()</span>
+<span id="projects">[MarkBind](https://github.com/MarkBind/markbind)</span>
