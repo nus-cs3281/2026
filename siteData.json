@@ -150,7 +150,8 @@
       "src": "students/FisherSkyi/knowledge.md",
       "headings": {
         "vue-js": "Vue.js",
-        "github-action-workflow": "GitHub Action workflow"
+        "github-action-workflow": "GitHub Action workflow",
+        "gemini-integration-for-java": "Gemini integration for Java"
       },
       "headingKeywords": {}
     },
@@ -549,6 +550,7 @@
         "yu-letian": "YU LETIAN",
         "vue-js": "Vue.js",
         "github-action-workflow": "GitHub Action workflow",
+        "gemini-integration-for-java": "Gemini integration for Java",
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
         "tool-technology-1-13": "Tool/Technology 1",
