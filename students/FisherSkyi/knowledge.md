@@ -23,3 +23,9 @@ Summary of current github workflow:
 - Push to master → Build report → Upload artifacts → Deploy to gh-pages → Live at GitHub Pages
 - Pull request   → Build report → Upload artifacts → (stop, don't deploy)
 
+### Gemini integration for Java
+resources Used:
+- [Gemini workshop for Java developers](https://github.com/glaforge/gemini-workshop-for-java-developers)
+- [Offical Documentation: Gemini in Java with Vertex AI and LangChain4j](https://codelabs.developers.google.com/codelabs/gemini-java-developers)
+- [Google Cloud](https://console.cloud.google.com/)
+
