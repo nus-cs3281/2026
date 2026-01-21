@@ -150,8 +150,10 @@
       "src": "students/FisherSkyi/knowledge.md",
       "headings": {
         "vue-js": "Vue.js",
+        "pug": "Pug",
         "github-action-workflow": "GitHub Action workflow",
-        "gemini-integration-for-java": "Gemini integration for Java"
+        "gemini-integration-for-java": "Gemini integration for Java",
+        "copilot": "Copilot"
       },
       "headingKeywords": {}
     },
@@ -549,8 +551,10 @@
         "tool-technology-2-12": "Tool/Technology 2",
         "yu-letian": "YU LETIAN",
         "vue-js": "Vue.js",
+        "pug": "Pug",
         "github-action-workflow": "GitHub Action workflow",
         "gemini-integration-for-java": "Gemini integration for Java",
+        "copilot": "Copilot",
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
         "tool-technology-1-13": "Tool/Technology 1",
