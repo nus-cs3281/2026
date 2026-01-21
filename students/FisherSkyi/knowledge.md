@@ -5,6 +5,16 @@ resources Used:
 - [Vue.js documentation](https://vuejs.org/guide/quick-start/)
 <!-- List the aspects you learned, and the resources you used to learn them, and a brief summary of each resource. -->
 
+### Pug
+
+Pug's parser is misinterpreting where the attribute value ends when you split it across lines.
+e.g.
+```pug
+:class="{warn: user.name === '-',
+    'active-text': ...}"
+```
+The parser gets confused by the line break and the quote positioning. It's a quirk of how Pug tokenizes/parses attributes across multiple lines.
+
 ### GitHub Action workflow
 
 Can set condition to only runs if:
@@ -28,4 +38,8 @@ resources Used:
 - [Gemini workshop for Java developers](https://github.com/glaforge/gemini-workshop-for-java-developers)
 - [Offical Documentation: Gemini in Java with Vertex AI and LangChain4j](https://codelabs.developers.google.com/codelabs/gemini-java-developers)
 - [Google Cloud](https://console.cloud.google.com/)
+
+### Copilot
+In-line chat: use `ctrl + shift + I` to open copilot chat window.
+
 
