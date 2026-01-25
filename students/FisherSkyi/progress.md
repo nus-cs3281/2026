@@ -5,6 +5,10 @@
 | 1| Issues: [#2506](https://github.com/reposense/RepoSense/issues/2506) [#2511](https://github.com/reposense/RepoSense/issues/2511) [#2512](https://github.com/reposense/RepoSense/issues/2512) <br/>  PR: [#2508](https://github.com/reposense/RepoSense/pull/2508) [#2510](https://github.com/reposense/RepoSense/pull/2510) |
 | 2 | Search on integrate Gemini into Java project and build a conversation bot [My Forked Repo](https://github.com/FisherSkyi/gemini-workshop-for-java-developers) |
 | 2 | Complete [task1 frontend](github.com/FisherSkyi/RepoSense/pull/new/frontend-highlight-name): Highlight the selected author name in the summary view |
+| 2 | Complete [task3 frontend](https://github.com/reposense/RepoSense/compare/master...FisherSkyi:RepoSense:add-tooltip-commit-message?expand=1) |
+| 2 | Complete [task2 frontend](https://github.com/FisherSkyi/RepoSense/tree/add-tooltip-filepath) |
+| 2 | PR: [#2526](https://github.com/reposense/RepoSense/pull/2526) |
+| 2 | Issue: [#2527](https://github.com/reposense/RepoSense/issues/2527), [#2520](https://github.com/reposense/RepoSense/issues/2520) [#2523](https://github.com/reposense/RepoSense/issues/2523) |
 
 
 | To be completed | Goals |
