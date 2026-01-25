@@ -142,6 +142,18 @@
       "headingKeywords": {}
     },
     {
+      "src": "students/FisherSkyi/Reposense.md",
+      "headings": {
+        "use-reposense": "Use RepoSense",
+        "issue-2512": "Issue 2512",
+        "key-files": "Key Files:",
+        "global-file-filter-implementation-plan": "Global File Filter Implementation Plan",
+        "overview": "Overview:",
+        "current-state-analysis": "Current State Analysis"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "students/FisherSkyi/info.md",
       "headings": {},
       "headingKeywords": {}
@@ -149,17 +161,65 @@
     {
       "src": "students/FisherSkyi/knowledge.md",
       "headings": {
+        "project-knowledge": "Project Knowledge",
         "vue-js": "Vue.js",
         "pug": "Pug",
+        "html": "HTML",
+        "devops": "DevOps",
         "github-action-workflow": "GitHub Action workflow",
+        "gradle": "Gradle",
+        "hot-reloading": "Hot Reloading",
+        "ai-in-development": "AI in Development",
         "gemini-integration-for-java": "Gemini integration for Java",
-        "copilot": "Copilot"
+        "copilot": "Copilot",
+        "claude": "Claude"
       },
       "headingKeywords": {}
     },
     {
       "src": "students/FisherSkyi/progress.md",
       "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "students/FisherSkyi/week2.md",
+      "headings": {
+        "global-file-filter-implementation-plan": "Global File Filter Implementation Plan",
+        "overview": "Overview",
+        "user-requirements": "User Requirements",
+        "current-state-analysis": "Current State Analysis",
+        "data-loading": "Data Loading",
+        "ui-structure": "UI Structure",
+        "filtering-patterns": "Filtering Patterns",
+        "implementation-plan": "Implementation Plan",
+        "1-create-global-file-browser-component": "1. Create Global File Browser Component",
+        "2-modify-summary-state-management": "2. Modify Summary State Management",
+        "3-update-filter-mode-selection": "3. Update Filter Mode Selection",
+        "4-layout-integration": "4. Layout Integration",
+        "5-data-loading-strategy": "5. Data Loading Strategy",
+        "6-file-expansion-logic": "6. File Expansion Logic",
+        "7-search-filter-implementation": "7. Search/Filter Implementation",
+        "8-hierarchical-display": "8. Hierarchical Display",
+        "critical-files-to-modify": "Critical Files to Modify",
+        "optional-enhancements": "Optional Enhancements",
+        "verification-steps": "Verification Steps",
+        "questions-decisions": "Questions/Decisions",
+        "implementation-progress-and-amp-change-justification": "Implementation Progress &amp; Change Justification",
+        "changes-made-before-interruption": "Changes Made (Before Interruption)",
+        "what-still-needs-to-be-done": "What Still Needs to Be Done",
+        "final-integration-steps-for-c-summary-vue": "Final Integration Steps for c-summary.vue",
+        "type-safety-and-amp-quality": "Type Safety &amp; Quality",
+        "why-this-approach": "Why This Approach?",
+        "important-design-insight-author-information": "Important Design Insight: Author Information",
+        "summary": "Summary",
+        "issues-found": "Issues Found",
+        "critical-syntax-error-in-api-ts": "Critical Syntax Error in api.ts",
+        "additional-potential-issues-after-syntax-fix": "Additional Potential Issues (After Syntax Fix)",
+        "eslint-errors-to-fix": "ESLint Errors to Fix",
+        "error-1-types-ts-array-type-and-delimiter-issues": "Error 1: types.ts Array Type and Delimiter Issues",
+        "error-2-c-global-file-browser-vue-array-type-and-import-order": "Error 2: c-global-file-browser.vue Array Type and Import Order",
+        "error-3-c-summary-vue-unused-variables": "Error 3: c-summary.vue Unused Variables"
+      },
       "headingKeywords": {}
     },
     {
@@ -550,11 +610,18 @@
         "tool-technology-1-12": "Tool/Technology 1",
         "tool-technology-2-12": "Tool/Technology 2",
         "yu-letian": "YU LETIAN",
+        "project-knowledge": "Project Knowledge",
         "vue-js": "Vue.js",
         "pug": "Pug",
+        "html": "HTML",
+        "devops": "DevOps",
         "github-action-workflow": "GitHub Action workflow",
+        "gradle": "Gradle",
+        "hot-reloading": "Hot Reloading",
+        "ai-in-development": "AI in Development",
         "gemini-integration-for-java": "Gemini integration for Java",
         "copilot": "Copilot",
+        "claude": "Claude",
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
         "tool-technology-1-13": "Tool/Technology 1",

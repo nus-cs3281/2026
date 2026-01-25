@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 6.1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="/2026/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/2026/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/2026/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/2026/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/2026/markbind/css/markbind.min.css"><link rel="stylesheet" href="/2026/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/2026/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+  <link rel="stylesheet" href="/2026/stylesheets/main.css">
+<link rel="icon" href="/2026/favicon.ico"></head>
+<script>
+  const baseUrl = '/2026'
+</script>
+<body >
+<div id="app"><!--[--><header fixed><div placement="top" data-v-26aac3dc><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-primary" data-v-26aac3dc><div class="container-fluid" data-v-26aac3dc><div class="navbar-left" data-v-26aac3dc><!--[--><a href="/2026/index.html" title="Home" class="navbar-brand">CS3281&amp;2-2026/Students</a><!--]--></div><div class="navbar-default" data-v-26aac3dc><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-26aac3dc><!--[--> <li class="dropdown nav-link" data-v-154e37d3><!--[--><a role="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" data-v-154e37d3><!--[-->CS3281<!--]--><span data-v-154e37d3></span></a><!--]--><!--[--><ul class="dropdown-menu" data-v-154e37d3><!--[--> <li><a href="/2026/index.html" class="dropdown-item">Students</a></li> <li><a href="/2026/students/knowledge.html" class="dropdown-item">Knowledge</a></li> <li><a href="/2026/activities-dashboard.html" class="dropdown-item">Activities Dashboard</a></li><!--]--></ul><!--]--></li> <li class="dropdown nav-link" data-v-154e37d3><!--[--><a role="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" data-v-154e37d3><!--[-->CS3282<!--]--><span data-v-154e37d3></span></a><!--]--><!--[--><ul class="dropdown-menu" data-v-154e37d3><!--[--> <li><a href="/2026/cs3282-index.html" class="dropdown-item">Students</a></li> <li><a href="/2026/activities-dashboard.html" class="dropdown-item">Activities Dashboard</a></li><!--]--></ul><!--]--></li> <li><a href="/2026/instructions.html" class="nav-link">Instructions</a></li> <li><a href="https://nus-cs3281.github.io/website/" class="nav-link">CS3281&amp;2 Website <span><span aria-hidden="true" class="glyphicon glyphicon-share-alt"></span></span></a></li> <!--]--></ul></div><ul class="navbar-nav navbar-right" data-v-26aac3dc><!--[--><li><a href="https://github.com/nus-cs3281/2026" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li><!--]--></ul></div></nav><div style="display:none;" class="lower-navbar-container" data-v-26aac3dc><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><div id="content-wrapper" class="fixed-header-padding"><h1 id="global-file-filter-implementation-plan">Global File Filter Implementation Plan<a class="fa fa-anchor" href="#global-file-filter-implementation-plan" onclick="event.stopPropagation()"></a></h1> <h2 id="overview">Overview<a class="fa fa-anchor" href="#overview" onclick="event.stopPropagation()"></a></h2> <p>Implement a global file filter feature that shows all files across all repositories when &quot;Global&quot; mode is selected, with a search bar for glob pattern filtering and expandable file details.</p> <h2 id="user-requirements">User Requirements<a class="fa fa-anchor" href="#user-requirements" onclick="event.stopPropagation()"></a></h2> <ul><li><strong>Scope</strong>: Show ALL files from ALL repositories in authorship.json</li> <li><strong>Display</strong>: File path, line count, author info, with expandable content</li> <li><strong>Layout</strong>: Flat list with indentation for folder structure</li> <li><strong>Interaction</strong>: Clicking a file shows its details (code segments with authorship)</li></ul> <h2 id="current-state-analysis">Current State Analysis<a class="fa fa-anchor" href="#current-state-analysis" onclick="event.stopPropagation()"></a></h2> <h3 id="data-loading">Data Loading<a class="fa fa-anchor" href="#data-loading" onclick="event.stopPropagation()"></a></h3> <ul><li>Authorship data is currently loaded per-repository on-demand via <code class="hljs inline no-lang">window.api.loadAuthorship(repoName)</code> (api.ts:300-308)</li> <li>Each repo&#39;s authorship.json is an array of FileResult objects with: path, fileType, lines, authorContributionMap</li> <li>Data stored in <code class="hljs inline no-lang">window.REPOS[repoName].files</code></li></ul> <h3 id="ui-structure">UI Structure<a class="fa fa-anchor" href="#ui-structure" onclick="event.stopPropagation()"></a></h3> <ul><li>Summary header (c-summary-header.vue) contains the &quot;Global/Local&quot; filter mode dropdown</li> <li>Current authorship view (c-authorship.vue) shows files for a single author in a single repository</li> <li>Two-panel layout exists (c-resizer.vue) with left/right resizable panels</li></ul> <h3 id="filtering-patterns">Filtering Patterns<a class="fa fa-anchor" href="#filtering-patterns" onclick="event.stopPropagation()"></a></h3> <ul><li>Existing glob filtering uses <code class="hljs inline no-lang">minimatch</code> library with options: <code class="hljs inline no-lang">{ matchBase: true, dot: true }</code></li> <li>File type filtering via checkboxes</li> <li>Search bar pattern in c-authorship.vue (lines 47-57)</li></ul> <h2 id="implementation-plan">Implementation Plan<a class="fa fa-anchor" href="#implementation-plan" onclick="event.stopPropagation()"></a></h2> <h3 id="1-create-global-file-browser-component">1. Create Global File Browser Component<a class="fa fa-anchor" href="#1-create-global-file-browser-component" onclick="event.stopPropagation()"></a></h3> <p><strong>New file</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/components/c-global-file-browser.vue</code></p> <p><strong>Features</strong>:</p> <ul><li>Search bar with glob pattern filtering (using minimatch)</li> <li>File list display with:
+<ul><li>Hierarchical indentation for folder structure</li> <li>File path with visual nesting</li> <li>Line count badge</li> <li>Author contribution info</li> <li>Expandable/collapsible file details</li></ul></li> <li>When file is expanded: show code segments with authorship (reuse c-segment-collection.vue)</li> <li>Empty state when no files match</li></ul> <p><strong>Data structure</strong>:</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">interface</span> GlobalFileEntry {
+</span><span>  <span class="hljs-attr">repoName</span>: <span class="hljs-built_in">string</span>;
+</span><span>  path: <span class="hljs-built_in">string</span>;
+</span><span>  fileType: <span class="hljs-built_in">string</span>;
+</span><span>  lineCount: <span class="hljs-built_in">number</span>;
+</span><span>  authors: <span class="hljs-built_in">string</span>[];  <span class="hljs-comment">// gitIds of contributors</span>
+</span><span>  authorContributionMap: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;;
+</span><span>  active: <span class="hljs-built_in">boolean</span>;  <span class="hljs-comment">// expanded state</span>
+</span><span>  segments?: AuthorshipFileSegment[];  <span class="hljs-comment">// loaded on expand</span>
+</span><span>}
+</span></code></pre><h3 id="2-modify-summary-state-management">2. Modify Summary State Management<a class="fa fa-anchor" href="#2-modify-summary-state-management" onclick="event.stopPropagation()"></a></h3> <p><strong>File</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/views/c-summary.vue</code> (or main view component)</p> <p><strong>Changes</strong>:</p> <ul><li>Track current filter mode state: &quot;global&quot; vs &quot;local&quot;</li> <li>When &quot;global&quot; mode is activated:
+<ul><li>Load authorship.json for ALL repositories (if not already loaded)</li> <li>Aggregate all files into a unified list</li> <li>Store in Vuex store or component state</li></ul></li> <li>Show/hide global file browser based on filter mode</li></ul> <h3 id="3-update-filter-mode-selection">3. Update Filter Mode Selection<a class="fa fa-anchor" href="#3-update-filter-mode-selection" onclick="event.stopPropagation()"></a></h3> <p><strong>File</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/components/c-summary-header.vue</code></p> <p><strong>Changes</strong>:</p> <ul><li>Modify computed property <code class="hljs inline no-lang">fileFilterScope</code> (line 12) to emit mode changes</li> <li>Add event handler to notify parent when mode switches to &quot;global&quot;</li> <li>Parent component responds by:
+<ul><li>Showing global file browser in left panel</li> <li>Hiding/collapsing summary charts</li></ul></li></ul> <h3 id="4-layout-integration">4. Layout Integration<a class="fa fa-anchor" href="#4-layout-integration" onclick="event.stopPropagation()"></a></h3> <p><strong>Files</strong>: Main view component (c-home.vue or c-summary.vue)</p> <p><strong>Changes</strong>:</p> <ul><li>Conditionally render global file browser when mode is &quot;global&quot;</li> <li>Layout options:
+<ul><li><strong>Option A</strong>: Replace left panel summary charts with file browser</li> <li><strong>Option B</strong>: Use existing two-panel layout (c-resizer.vue)
+<ul><li>Left panel: global file browser</li> <li>Right panel: selected file details</li></ul></li></ul></li> <li>Add CSS for panel transitions</li></ul> <h3 id="5-data-loading-strategy">5. Data Loading Strategy<a class="fa fa-anchor" href="#5-data-loading-strategy" onclick="event.stopPropagation()"></a></h3> <p><strong>File 1</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/types/window.ts</code></p> <p>Add import at the top and update the <code class="hljs inline no-lang">Api</code> interface (line 20-34):</p> <pre><code class="hljs typescript"><span><span class="hljs-comment">// Add at the top with other imports:</span>
+</span><span><span class="hljs-keyword">import</span> { GlobalFileEntry } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;./types&#39;</span>;
+</span><span>
+</span><span><span class="hljs-comment">// Update the Api interface:</span>
+</span><span><span class="hljs-keyword">interface</span> Api {
+</span><span>  <span class="hljs-attr">loadJSON</span>: <span class="hljs-function">(<span class="hljs-params">fname: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;unknown&gt;;
+</span><span>  loadSummary: <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;...&gt;;
+</span><span>  loadCommits: <span class="hljs-function">(<span class="hljs-params">repoName: <span class="hljs-built_in">string</span>, defaultSortOrder: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;User[]&gt;;
+</span><span>  loadAuthorship: <span class="hljs-function">(<span class="hljs-params">repoName: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;AuthorshipSchema&gt;;
+</span><span>  loadAllAuthorship: <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;GlobalFileEntry[]&gt;;  <span class="hljs-comment">// NEW: Add this line</span>
+</span><span>  setContributionOfCommitResultsAndInsertRepoId: <span class="hljs-function">(<span class="hljs-params">dailyCommits: AuthorDailyContributions[], repoId: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-built_in">void</span>;
+</span><span>}
+</span></code></pre><p><strong>Note</strong>: You already added <code class="hljs inline no-lang">loadAllAuthorship: () =&gt; Promise&lt;any[]&gt;;</code> on line 33, but it should be <code class="hljs inline no-lang">Promise&lt;GlobalFileEntry[]&gt;</code> instead of <code class="hljs inline no-lang">Promise&lt;any[]&gt;</code> once the GlobalFileEntry interface is defined.</p> <p><strong>File 2</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/utils/api.ts</code></p> <p><strong>New method</strong>: <code class="hljs inline no-lang">loadAllAuthorship()</code></p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">async</span> loadAllAuthorship(): <span class="hljs-built_in">Promise</span>&lt;GlobalFileEntry[]&gt; {
+</span><span>  <span class="hljs-keyword">const</span> allFiles: GlobalFileEntry[] = [];
+</span><span>
+</span><span>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> repoName <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>.REPOS) {
+</span><span>    <span class="hljs-comment">// Load authorship if not already loaded</span>
+</span><span>    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">window</span>.REPOS[repoName].files) {
+</span><span>      <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.loadAuthorship(repoName);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">// Aggregate files with repo context</span>
+</span><span>    <span class="hljs-keyword">const</span> files = <span class="hljs-built_in">window</span>.REPOS[repoName].files;
+</span><span>    files.forEach(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> {
+</span><span>      allFiles.push({
+</span><span>        repoName,
+</span><span>        <span class="hljs-attr">path</span>: file.path,
+</span><span>        <span class="hljs-attr">fileType</span>: file.fileType,
+</span><span>        <span class="hljs-attr">lineCount</span>: calculateTotalLines(file),
+</span><span>        <span class="hljs-attr">authors</span>: <span class="hljs-built_in">Object</span>.keys(file.authorContributionMap),
+</span><span>        <span class="hljs-attr">authorContributionMap</span>: file.authorContributionMap,
+</span><span>        <span class="hljs-attr">active</span>: <span class="hljs-literal">false</span>,
+</span><span>      });
+</span><span>    });
+</span><span>  }
+</span><span>
+</span><span>  <span class="hljs-keyword">return</span> allFiles;
+</span><span>}
+</span></code></pre><p><strong>File 3</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/types/types.ts</code></p> <p>Add the <code class="hljs inline no-lang">GlobalFileEntry</code> interface (add after line 80, near other file-related interfaces):</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> GlobalFileEntry {
+</span><span>  <span class="hljs-attr">repoName</span>: <span class="hljs-built_in">string</span>;
+</span><span>  path: <span class="hljs-built_in">string</span>;
+</span><span>  fileType: <span class="hljs-built_in">string</span>;
+</span><span>  lineCount: <span class="hljs-built_in">number</span>;
+</span><span>  authors: <span class="hljs-built_in">string</span>[];
+</span><span>  authorContributionMap: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;;
+</span><span>  isBinary: <span class="hljs-built_in">boolean</span>;
+</span><span>  isIgnored: <span class="hljs-built_in">boolean</span>;
+</span><span>  active: <span class="hljs-built_in">boolean</span>;
+</span><span>  lines?: { <span class="hljs-attr">lineNumber</span>: <span class="hljs-built_in">number</span>; author: { <span class="hljs-attr">gitId</span>: <span class="hljs-built_in">string</span> }; content: <span class="hljs-built_in">string</span>; isFullCredit: <span class="hljs-built_in">boolean</span> }[];
+</span><span>  segments?: AuthorshipFileSegment[];
+</span><span>}
+</span></code></pre><p>Then update api.ts to import and use this type:</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">import</span> { GlobalFileEntry } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../types/types&#39;</span>;
+</span><span>
+</span><span><span class="hljs-comment">// In the loadAllAuthorship method:</span>
+</span><span><span class="hljs-keyword">async</span> loadAllAuthorship(): <span class="hljs-built_in">Promise</span>&lt;GlobalFileEntry[]&gt; {
+</span><span>  <span class="hljs-keyword">const</span> allFiles: GlobalFileEntry[] = [];  <span class="hljs-comment">// Explicitly type the array</span>
+</span><span>  <span class="hljs-comment">// ... rest of implementation</span>
+</span><span>}
+</span></code></pre><h3 id="6-file-expansion-logic">6. File Expansion Logic<a class="fa fa-anchor" href="#6-file-expansion-logic" onclick="event.stopPropagation()"></a></h3> <p><strong>In c-global-file-browser.vue</strong>:</p> <p>When user clicks to expand a file:</p> <ol><li>Check if segments already loaded (<code class="hljs inline no-lang">file.segments</code>)</li> <li>If not loaded:
+<ul><li>Fetch from <code class="hljs inline no-lang">window.REPOS[file.repoName].files.find(f =&gt; f.path === file.path)</code></li> <li>Extract line data and build segments (similar to c-authorship.vue logic)</li> <li>Store in file.segments</li></ul></li> <li>Toggle <code class="hljs inline no-lang">file.active</code> state</li> <li>Render segments using c-segment-collection component</li></ol> <h3 id="7-search-filter-implementation">7. Search/Filter Implementation<a class="fa fa-anchor" href="#7-search-filter-implementation" onclick="event.stopPropagation()"></a></h3> <p><strong>In c-global-file-browser.vue</strong>:</p> <pre><code class="hljs typescript"><span>computed: {
+</span><span>  <span class="hljs-function"><span class="hljs-title">filteredFiles</span>(<span class="hljs-params"></span>)</span> {
+</span><span>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.allFiles.filter(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span>
+</span><span>      minimatch(file.path, <span class="hljs-built_in">this</span>.searchPattern || <span class="hljs-string">&#39;*&#39;</span>, {
+</span><span>        <span class="hljs-attr">matchBase</span>: <span class="hljs-literal">true</span>,
+</span><span>        <span class="hljs-attr">dot</span>: <span class="hljs-literal">true</span>
+</span><span>      })
+</span><span>    ).sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a.path.localeCompare(b.path));
+</span><span>  }
+</span><span>}
+</span></code></pre><h3 id="8-hierarchical-display">8. Hierarchical Display<a class="fa fa-anchor" href="#8-hierarchical-display" onclick="event.stopPropagation()"></a></h3> <p><strong>Rendering approach</strong>:</p> <ul><li>Calculate indentation level based on path depth (number of <code class="hljs inline no-lang">/</code> separators)</li> <li>Add CSS padding-left based on depth</li> <li>Group files by directory prefix for visual hierarchy</li> <li>Example:<pre><code class="hljs"><span>src/
+</span><span>  components/
+</span><span>    Button.vue
+</span><span>    Input.vue
+</span><span>  utils/
+</span><span>    api.ts
+</span></code></pre></li></ul> <h2 id="critical-files-to-modify">Critical Files to Modify<a class="fa fa-anchor" href="#critical-files-to-modify" onclick="event.stopPropagation()"></a></h2> <ol><li><strong>types/types.ts</strong> - Define <code class="hljs inline no-lang">GlobalFileEntry</code> interface</li> <li><strong>types/window.ts</strong> - Add <code class="hljs inline no-lang">GlobalFileEntry</code> import and update <code class="hljs inline no-lang">loadAllAuthorship()</code> return type from <code class="hljs inline no-lang">any[]</code> to <code class="hljs inline no-lang">GlobalFileEntry[]</code></li> <li><strong>utils/api.ts</strong> - Add <code class="hljs inline no-lang">GlobalFileEntry</code> import and <code class="hljs inline no-lang">loadAllAuthorship()</code> implementation</li> <li><strong>c-summary-header.vue</strong> - Add mode change emission (line 12-13)</li> <li><strong>c-summary.vue</strong> or <strong>c-home.vue</strong> - Layout switching logic</li> <li><strong>New: c-global-file-browser.vue</strong> - Main implementation component</li> <li><strong>store.ts</strong> (if needed) - Global file state management</li></ol> <h2 id="optional-enhancements">Optional Enhancements<a class="fa fa-anchor" href="#optional-enhancements" onclick="event.stopPropagation()"></a></h2> <ul><li>Add loading spinner during authorship data loading</li> <li>Persist search pattern in URL hash</li> <li>Add file type filter checkboxes (similar to c-authorship.vue)</li> <li>Sort options (by path, line count, file type)</li> <li>Pagination or virtual scrolling for large file lists</li></ul> <h2 id="verification-steps">Verification Steps<a class="fa fa-anchor" href="#verification-steps" onclick="event.stopPropagation()"></a></h2> <ol><li>Start dev server: <code class="hljs inline no-lang">npm run serve</code></li> <li>Navigate to summary view</li> <li>Select &quot;Global&quot; from filter mode dropdown</li> <li>Verify:
+<ul><li>Left panel shows global file browser</li> <li>Search bar accepts glob patterns (e.g., <code class="hljs inline no-lang">*.vue</code>, <code class="hljs inline no-lang">src/**/*.ts</code>)</li> <li>Files are displayed with correct indentation</li> <li>File paths, line counts, and author info are shown</li></ul></li> <li>Click a file to expand</li> <li>Verify:
+<ul><li>File content/segments load</li> <li>Code is displayed with authorship coloring</li> <li>Can collapse the file again</li></ul></li> <li>Test edge cases:
+<ul><li>Empty search results</li> <li>Binary files</li> <li>Files with no authorship data</li></ul></li> <li>Switch back to &quot;Local&quot; mode</li> <li>Verify original summary view is restored</li></ol> <h2 id="questions-decisions">Questions/Decisions<a class="fa fa-anchor" href="#questions-decisions" onclick="event.stopPropagation()"></a></h2> <ul><li>Should binary files be included in the global view?</li> <li>Should the search be case-sensitive?</li> <li>Maximum number of files to display before pagination?</li> <li>Should file tree be collapsible by folder?</li></ul> <hr> <h2 id="implementation-progress-and-amp-change-justification">Implementation Progress &amp; Change Justification<a class="fa fa-anchor" href="#implementation-progress-and-amp-change-justification" onclick="event.stopPropagation()"></a></h2> <h3 id="changes-made-before-interruption">Changes Made (Before Interruption)<a class="fa fa-anchor" href="#changes-made-before-interruption" onclick="event.stopPropagation()"></a></h3> <h4 id="1-added-globalfileentry-interface-types-types-ts-85-97">1. Added <code class="hljs inline no-lang">GlobalFileEntry</code> Interface (types/types.ts:85-97)<a class="fa fa-anchor" href="#1-added-globalfileentry-interface-types-types-ts-85-97" onclick="event.stopPropagation()"></a></h4> <p><strong>What was added:</strong></p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> GlobalFileEntry {
+</span><span>  <span class="hljs-attr">repoName</span>: <span class="hljs-built_in">string</span>;           <span class="hljs-comment">// NEW: Track which repo the file belongs to</span>
+</span><span>  path: <span class="hljs-built_in">string</span>;               <span class="hljs-comment">// File path within the repo</span>
+</span><span>  fileType: <span class="hljs-built_in">string</span>;           <span class="hljs-comment">// File extension/type</span>
+</span><span>  lineCount: <span class="hljs-built_in">number</span>;          <span class="hljs-comment">// Total lines in file</span>
+</span><span>  authors: <span class="hljs-built_in">string</span>[];          <span class="hljs-comment">// NEW: Array of author gitIds</span>
+</span><span>  authorContributionMap: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>&gt;;  <span class="hljs-comment">// Author -&gt; line count mapping</span>
+</span><span>  isBinary: <span class="hljs-built_in">boolean</span>;          <span class="hljs-comment">// Whether file is binary</span>
+</span><span>  isIgnored: <span class="hljs-built_in">boolean</span>;         <span class="hljs-comment">// Whether file is ignored</span>
+</span><span>  active: <span class="hljs-built_in">boolean</span>;            <span class="hljs-comment">// NEW: Expansion state for UI</span>
+</span><span>  lines?: { <span class="hljs-attr">lineNumber</span>: <span class="hljs-built_in">number</span>; author: { <span class="hljs-attr">gitId</span>: <span class="hljs-built_in">string</span> }; content: <span class="hljs-built_in">string</span>; isFullCredit: <span class="hljs-built_in">boolean</span> }[];
+</span><span>  segments?: AuthorshipFileSegment[];  <span class="hljs-comment">// NEW: Loaded on-demand when expanded</span>
+</span><span>}
+</span></code></pre><p><strong>Justification:</strong></p> <ul><li><strong>Problem</strong>: The existing <code class="hljs inline no-lang">AuthorshipFile</code> interface is designed for single-repository views and lacks repo context</li> <li><strong>Solution</strong>: Create a new interface that extends the concept with cross-repository awareness</li> <li><strong>Key differences from AuthorshipFile</strong>:
+<ul><li><code class="hljs inline no-lang">repoName</code>: Essential for distinguishing files from different repos with same paths</li> <li><code class="hljs inline no-lang">authors[]</code>: Pre-computed list of contributors for quick display without processing authorContributionMap</li> <li><code class="hljs inline no-lang">active</code>: UI state management for expandable file list</li> <li><code class="hljs inline no-lang">segments</code>: Lazy-loaded authorship data to avoid loading all file contents upfront</li> <li><code class="hljs inline no-lang">lines</code>: Optional detailed line data that can be loaded on-demand</li></ul></li> <li><strong>Why not reuse AuthorshipFile?</strong>: Mixing repository metadata into per-repo files would break existing single-repo views</li></ul> <h4 id="2-created-global-file-browser-component-c-global-file-browser-vue">2. Created Global File Browser Component (c-global-file-browser.vue)<a class="fa fa-anchor" href="#2-created-global-file-browser-component-c-global-file-browser-vue" onclick="event.stopPropagation()"></a></h4> <p><strong>What was added:</strong>
+A complete Vue component (~160 lines) with:</p> <p><strong>Template Structure:</strong></p> <pre><code class="hljs"><span>#global-file-browser
+</span><span>  .header
+</span><span>    h3 Global File Browser
+</span><span>    .search-container
+</span><span>      input.search-input      // Glob pattern search
+</span><span>      .file-count            // Show filtered count
+</span><span>
+</span><span>  .file-list
+</span><span>    .file-item              // Expandable file entries
+</span><span>      .file-header          // Click to expand
+</span><span>        .caret              // Visual indicator
+</span><span>        .file-path          // With hierarchical indentation
+</span><span>        .file-info          // Badges: repo, lines, binary, authors
+</span><span>      .file-content         // Expanded view
+</span><span>        c-segment-collection  // Reuse existing authorship display
+</span><span>
+</span><span>  .empty-state             // No matches feedback
+</span></code></pre><p><strong>Script Logic:</strong></p> <pre><code class="hljs typescript"><span>- data: searchPattern (<span class="hljs-built_in">string</span>)
+</span><span>- computed: filteredFiles()
+</span><span>  <span class="hljs-comment">// Uses minimatch for glob filtering, sorts alphabetically</span>
+</span><span>- methods:
+</span><span>  - getIndentLevel(path): Calculate visual nesting depth
+</span><span>  - toggleFile(file): Expand/collapse files
+</span><span>  - loadFileSegments(file): Lazy-load authorship segments on expand
+</span></code></pre><p><strong>Justification:</strong></p> <p><strong>Why a new component?</strong></p> <ul><li>Existing <code class="hljs inline no-lang">c-authorship.vue</code> is tightly coupled to single-author, single-repo views</li> <li>Global view has different requirements: multi-repo, all files, different layout</li> <li>Clean separation of concerns maintains code clarity</li></ul> <p><strong>Key design decisions:</strong></p> <ol><li><p><strong>Lazy Loading Segments</strong> (loadFileSegments method):</p> <ul><li><strong>Why</strong>: Loading authorship data for ALL files from ALL repos upfront could be 1000s of files</li> <li><strong>How</strong>: Only load <code class="hljs inline no-lang">segments</code> when user expands a file</li> <li><strong>Benefit</strong>: Fast initial render, memory efficient</li></ul></li> <li><p><strong>Hierarchical Indentation</strong> (getIndentLevel):</p> <pre><code class="hljs typescript"><span>getIndentLevel(path: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">number</span> {
+</span><span>  <span class="hljs-keyword">const</span> depth = (path.match(<span class="hljs-regexp">/\//g</span>) || []).length;
+</span><span>  <span class="hljs-keyword">return</span> depth * <span class="hljs-number">16</span>; <span class="hljs-comment">// 16px per level</span>
+</span><span>}
+</span></code></pre><ul><li><strong>Why</strong>: User requirement was &quot;flat list with indentation for folder structure&quot;</li> <li><strong>Visual clarity</strong>: Files at <code class="hljs inline no-lang">src/utils/api.ts</code> indent more than <code class="hljs inline no-lang">src/api.ts</code></li> <li><strong>Alternative considered</strong>: Full tree with collapsible folders (more complex, not requested)</li></ul></li> <li><p><strong>Glob Pattern Filtering</strong>:</p> <pre><code class="hljs typescript"><span><span class="hljs-function"><span class="hljs-title">filteredFiles</span>(<span class="hljs-params"></span>)</span> {
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.files.filter(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span>
+</span><span>    minimatch(file.path, pattern, { <span class="hljs-attr">matchBase</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">dot</span>: <span class="hljs-literal">true</span> })
+</span><span>  )
+</span><span>}
+</span></code></pre><ul><li><strong>Why</strong>: Reuses existing pattern from c-authorship.vue for consistency</li> <li><strong>matchBase: true</strong>: Allows <code class="hljs inline no-lang">*.vue</code> to match <code class="hljs inline no-lang">src/components/foo.vue</code></li> <li><strong>dot: true</strong>: Includes hidden files like <code class="hljs inline no-lang">.gitignore</code></li></ul></li> <li><p><strong>Reusing c-segment-collection</strong>:</p> <ul><li><strong>Why</strong>: Don&#39;t reinvent authorship visualization</li> <li><strong>Benefit</strong>: Consistent coloring, formatting, and behavior</li> <li><strong>Implementation</strong>: Build segments from lines using same algorithm as c-authorship.vue</li></ul></li> <li><p><strong>File Information Badges</strong>:</p> <ul><li>Repo name badge: Distinguish files from different repos</li> <li>Line count: Quick size indicator</li> <li>Binary/Ignored badges: Show special file states</li> <li>Author count: Collaboration indicator</li></ul></li></ol> <p><strong>CSS Styling Decisions:</strong></p> <ul><li>Border highlights on expanded files for clarity</li> <li>Hover effects for interactivity feedback</li> <li>Monospace font for file paths (standard for code paths)</li> <li>Color-coded badges (blue=repo, yellow=binary/ignored, green=authors)</li></ul> <h3 id="what-still-needs-to-be-done">What Still Needs to Be Done<a class="fa fa-anchor" href="#what-still-needs-to-be-done" onclick="event.stopPropagation()"></a></h3> <ol><li>✅ <strong>c-summary-header.vue</strong> - COMPLETED: Added fileFilterScope prop, emit, and computed property</li> <li><strong>c-summary.vue</strong> - Integrate the component, handle mode switching, call <code class="hljs inline no-lang">loadAllAuthorship()</code></li> <li><strong>Layout integration</strong> - Conditionally show global file browser vs regular summary view</li> <li><strong>Testing</strong> - Verify end-to-end functionality</li></ol> <h3 id="final-integration-steps-for-c-summary-vue">Final Integration Steps for c-summary.vue<a class="fa fa-anchor" href="#final-integration-steps-for-c-summary-vue" onclick="event.stopPropagation()"></a></h3> <p><strong>Required changes:</strong></p> <ol><li><p><strong>Import the component</strong> (add to imports section around line 70-73):</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">import</span> cGlobalFileBrowser <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../components/c-global-file-browser.vue&#39;</span>;
+</span></code></pre></li> <li><p><strong>Register the component</strong> (add to components section around line 97-102):</p> <pre><code class="hljs typescript"><span>components: {
+</span><span>  cErrorMessageBox,
+</span><span>  cSummaryCharts,
+</span><span>  cFileTypeCheckboxes,
+</span><span>  cSummaryHeader,
+</span><span>  cGlobalFileBrowser,  <span class="hljs-comment">// ADD THIS</span>
+</span><span>},
+</span></code></pre></li> <li><p><strong>Add data properties</strong> (add to data() return around line 127-146):</p> <pre><code class="hljs typescript"><span>fileFilterScope: <span class="hljs-string">&#39;local&#39;</span> <span class="hljs-keyword">as</span> <span class="hljs-string">&#39;global&#39;</span> | <span class="hljs-string">&#39;local&#39;</span>,
+</span><span><span class="hljs-attr">globalFiles</span>: [] <span class="hljs-keyword">as</span> GlobalFileEntry[],
+</span></code></pre></li> <li><p><strong>Add v-model binding</strong> (update c-summary-header around line 3-27):
+Add this line to the c-summary-header props:</p> <pre><code class="hljs"><span>v-model:file-filter-scope=&quot;fileFilterScope&quot;,
+</span></code></pre></li> <li><p><strong>Add conditional rendering in template</strong> (after c-summary-header, before c-summary-charts around line 28-42):</p> <pre><code class="hljs"><span>c-global-file-browser(
+</span><span>  v-if=&quot;fileFilterScope === &#39;global&#39; &amp;&amp; !isWidgetMode&quot;,
+</span><span>  :files=&quot;globalFiles&quot;
+</span><span>)
+</span><span>
+</span><span>c-summary-charts(
+</span><span>  v-if=&quot;fileFilterScope === &#39;local&#39;&quot;,
+</span><span>  ...existing props...
+</span><span>)
+</span></code></pre></li> <li><p><strong>Add watcher to load global files</strong> (add to watch section around line 189-220):</p> <pre><code class="hljs typescript"><span>fileFilterScope: {
+</span><span>  <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">handler</span>(<span class="hljs-params">newValue: <span class="hljs-string">&#39;global&#39;</span> | <span class="hljs-string">&#39;local&#39;</span></span>)</span> {
+</span><span>    <span class="hljs-keyword">if</span> (newValue === <span class="hljs-string">&#39;global&#39;</span> &amp;&amp; <span class="hljs-built_in">this</span>.globalFiles.length === <span class="hljs-number">0</span>) {
+</span><span>      <span class="hljs-built_in">this</span>.$store.dispatch(<span class="hljs-string">&#39;incrementLoadingOverlayCount&#39;</span>, <span class="hljs-number">1</span>);
+</span><span>      <span class="hljs-keyword">try</span> {
+</span><span>        <span class="hljs-built_in">this</span>.globalFiles = <span class="hljs-keyword">await</span> <span class="hljs-built_in">window</span>.api.loadAllAuthorship();
+</span><span>      } <span class="hljs-keyword">catch</span> (error) {
+</span><span>        <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&#39;Failed to load global authorship:&#39;</span>, error);
+</span><span>      } <span class="hljs-keyword">finally</span> {
+</span><span>        <span class="hljs-built_in">this</span>.$store.dispatch(<span class="hljs-string">&#39;incrementLoadingOverlayCount&#39;</span>, -<span class="hljs-number">1</span>);
+</span><span>      }
+</span><span>    }
+</span><span>  },
+</span><span>  <span class="hljs-attr">immediate</span>: <span class="hljs-literal">false</span>,
+</span><span>},
+</span></code></pre></li> <li><p><strong>Import GlobalFileEntry type</strong> (add to imports around line 75-82):</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">import</span> { GlobalFileEntry } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../types/types&#39;</span>;
+</span></code></pre></li></ol> <h3 id="type-safety-and-amp-quality">Type Safety &amp; Quality<a class="fa fa-anchor" href="#type-safety-and-amp-quality" onclick="event.stopPropagation()"></a></h3> <p><strong>TypeScript Benefits:</strong></p> <ul><li><code class="hljs inline no-lang">GlobalFileEntry</code> interface provides compile-time safety</li> <li>PropType validation ensures correct data passed to component</li> <li>Prevents runtime errors from mismatched data structures</li></ul> <p><strong>Code Quality:</strong></p> <ul><li>Follows existing patterns (Vue 3 composition API, Pug templates, SCSS)</li> <li>Reuses existing utilities (minimatch) and components (c-segment-collection)</li> <li>Clear method names and comments</li> <li>Handles edge cases (null checks, empty results)</li></ul> <h3 id="why-this-approach">Why This Approach?<a class="fa fa-anchor" href="#why-this-approach" onclick="event.stopPropagation()"></a></h3> <p><strong>Alternatives considered:</strong></p> <ol><li><p><strong>Modify existing c-authorship.vue</strong></p> <ul><li>❌ Would create complex conditional logic</li> <li>❌ Couples two different use cases</li> <li>✅ Our approach: Separate component, clear responsibility</li></ul></li> <li><p><strong>Load all authorship data upfront</strong></p> <ul><li>❌ Poor performance with many repos/files</li> <li>❌ High memory usage</li> <li>✅ Our approach: Lazy loading on expand</li></ul></li> <li><p><strong>Full tree view with collapsible folders</strong></p> <ul><li>❌ Not requested by user</li> <li>❌ More complex to implement</li> <li>❌ Doesn&#39;t match user&#39;s &quot;flat list with indentation&quot; requirement</li> <li>✅ Our approach: Flat list with visual hierarchy via indentation</li></ul></li></ol> <h3 id="important-design-insight-author-information">Important Design Insight: Author Information<a class="fa fa-anchor" href="#important-design-insight-author-information" onclick="event.stopPropagation()"></a></h3> <p><strong>User feedback</strong>: Author information may not be important in global file search since we&#39;re not targeting a specific author.</p> <p><strong>Current implementation includes:</strong></p> <ul><li>Author count badge in file list</li> <li>Full authorship segments with color-coding when file is expanded</li></ul> <p><strong>Considerations for simplification:</strong></p> <ol><li><p><strong>Remove author-related display in file list:</strong></p> <ul><li>Remove <code class="hljs inline no-lang">.authors</code> badge showing author count</li> <li>Keep: repo name, file path, line count, file type badges</li> <li>Benefit: Cleaner, more focused UI</li></ul></li> <li><p><strong>File content display options:</strong></p> <ul><li><p><strong>Option A (Current)</strong>: Show full authorship segments with color-coding</p> <ul><li>Pro: Reuses existing component, consistent with authorship view</li> <li>Con: May be visual overkill for file browsing</li></ul></li> <li><p><strong>Option B (Simplified)</strong>: Show plain file content without authorship coloring</p> <ul><li>Pro: Simpler, faster rendering, focuses on file content</li> <li>Con: Loses authorship information entirely</li></ul></li> <li><p><strong>Option C (Hybrid)</strong>: Show plain content by default, with option to &quot;Show Authorship&quot;</p> <ul><li>Pro: Best of both worlds - simple by default, detailed when needed</li> <li>Con: More complex implementation</li></ul></li></ul></li></ol> <p><strong>Decision</strong>: Hide author badges for initial implementation to focus on core file browsing functionality. Will keep authorship segment loading capability for potential future use.</p> <p><strong>Quick refinement to make after basic functionality works:</strong></p> <ul><li>Comment out or remove <code class="hljs inline no-lang">.authors</code> badge from file list template</li> <li>Keep segment loading logic intact (no code changes needed)</li> <li>Can easily add back later if users request it</li></ul> <h3 id="summary">Summary<a class="fa fa-anchor" href="#summary" onclick="event.stopPropagation()"></a></h3> <p>The changes establish the foundation for the global file filter feature by:</p> <ol><li><strong>Type system</strong>: Defining proper interfaces for cross-repo file data</li> <li><strong>UI component</strong>: Creating a complete, reusable file browser with search and expansion</li> <li><strong>Performance</strong>: Using lazy loading to handle large codebases efficiently</li> <li><strong>Consistency</strong>: Reusing existing patterns, components, and libraries</li> <li><strong>Flexibility</strong>: Can easily simplify author display based on user feedback</li></ol> <p>The implementation follows Vue.js best practices, TypeScript type safety, and the existing codebase patterns for maintainability.</p> <hr> <h2 id="issues-found">Issues Found<a class="fa fa-anchor" href="#issues-found" onclick="event.stopPropagation()"></a></h2> <h3 id="critical-syntax-error-in-api-ts">Critical Syntax Error in api.ts<a class="fa fa-anchor" href="#critical-syntax-error-in-api-ts" onclick="event.stopPropagation()"></a></h3> <p><strong>Location</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/utils/api.ts:347</code></p> <p><strong>Error Message</strong>:</p> <pre><code class="hljs"><span>Expected &quot;)&quot; but found &quot;return&quot;
+</span><span>/Users/sky/CS3281/RepoSense/frontend/src/utils/api.ts:349:4
+</span></code></pre><p><strong>Root Cause</strong>:
+The <code class="hljs inline no-lang">loadAllAuthorship()</code> method has a missing closing parenthesis for the <code class="hljs inline no-lang">.forEach()</code> call on line 326.</p> <p><strong>Current Code (Broken)</strong>:</p> <pre><code class="hljs typescript"><span><span class="hljs-comment">// Line 326</span>
+</span><span>repoNames.forEach(<span class="hljs-function">(<span class="hljs-params">repoName</span>) =&gt;</span> {
+</span><span>  <span class="hljs-keyword">const</span> files = <span class="hljs-built_in">window</span>.REPOS[repoName].files;
+</span><span>  <span class="hljs-keyword">if</span> (!files) {
+</span><span>    <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Skip if still undefined (shouldn&#39;t happen)</span>
+</span><span>  }
+</span><span>
+</span><span>  files.forEach(<span class="hljs-function">(<span class="hljs-params">file</span>) =&gt;</span> {
+</span><span>    <span class="hljs-keyword">const</span> totalLines = file.lines ? file.lines.length : <span class="hljs-number">0</span>;
+</span><span>    allFiles.push({
+</span><span>      repoName,
+</span><span>      <span class="hljs-attr">path</span>: file.path,
+</span><span>      <span class="hljs-attr">fileType</span>: file.fileType,
+</span><span>      <span class="hljs-attr">lineCount</span>: totalLines,
+</span><span>      <span class="hljs-attr">authors</span>: <span class="hljs-built_in">Object</span>.keys(file.authorContributionMap || {}),
+</span><span>      <span class="hljs-attr">authorContributionMap</span>: file.authorContributionMap || {},
+</span><span>      <span class="hljs-attr">isBinary</span>: file.isBinary || <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">isIgnored</span>: file.isIgnored || <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">active</span>: <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">lines</span>: file.lines,
+</span><span>    });
+</span><span>  });
+</span><span>}  <span class="hljs-comment">// ❌ WRONG: Missing closing parenthesis for forEach</span>
+</span><span>
+</span><span><span class="hljs-keyword">return</span> allFiles;  <span class="hljs-comment">// Line 349 - Parser expects ) before this</span>
+</span></code></pre><p><strong>Fix Required</strong>:
+Line 347 should be <code class="hljs inline no-lang">});</code> instead of just <code class="hljs inline no-lang">}</code> to properly close the <code class="hljs inline no-lang">forEach()</code> call.</p> <p><strong>Corrected Code</strong>:</p> <pre><code class="hljs typescript"><span>repoNames.forEach(<span class="hljs-function">(<span class="hljs-params">repoName</span>) =&gt;</span> {
+</span><span>  <span class="hljs-keyword">const</span> files = <span class="hljs-built_in">window</span>.REPOS[repoName].files;
+</span><span>  <span class="hljs-keyword">if</span> (!files) {
+</span><span>    <span class="hljs-keyword">return</span>;
+</span><span>  }
+</span><span>
+</span><span>  files.forEach(<span class="hljs-function">(<span class="hljs-params">file</span>) =&gt;</span> {
+</span><span>    <span class="hljs-keyword">const</span> totalLines = file.lines ? file.lines.length : <span class="hljs-number">0</span>;
+</span><span>    allFiles.push({
+</span><span>      repoName,
+</span><span>      <span class="hljs-attr">path</span>: file.path,
+</span><span>      <span class="hljs-attr">fileType</span>: file.fileType,
+</span><span>      <span class="hljs-attr">lineCount</span>: totalLines,
+</span><span>      <span class="hljs-attr">authors</span>: <span class="hljs-built_in">Object</span>.keys(file.authorContributionMap || {}),
+</span><span>      <span class="hljs-attr">authorContributionMap</span>: file.authorContributionMap || {},
+</span><span>      <span class="hljs-attr">isBinary</span>: file.isBinary || <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">isIgnored</span>: file.isIgnored || <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">active</span>: <span class="hljs-literal">false</span>,
+</span><span>      <span class="hljs-attr">lines</span>: file.lines,
+</span><span>    });
+</span><span>  });
+</span><span>});  <span class="hljs-comment">// ✅ CORRECT: Closes the forEach with );</span>
+</span><span>
+</span><span><span class="hljs-keyword">return</span> allFiles;
+</span></code></pre><h3 id="additional-potential-issues-after-syntax-fix">Additional Potential Issues (After Syntax Fix)<a class="fa fa-anchor" href="#additional-potential-issues-after-syntax-fix" onclick="event.stopPropagation()"></a></h3> <p>Once the syntax error is fixed, there may still be ESLint warnings:</p> <ol><li><p><strong>c-summary-header.vue:55</strong> - Unused emit declaration</p> <ul><li>The <code class="hljs inline no-lang">filterModeChanged</code> emit might be flagged as defined but never used</li> <li>This could be a false positive if the emit is actually being used by parent</li></ul></li> <li><p><strong>c-summary.vue</strong> - Unused imports</p> <ul><li><code class="hljs inline no-lang">cGlobalFileBrowser</code> and <code class="hljs inline no-lang">GlobalFileEntry</code> might be flagged as unused</li> <li>Likely a false positive since they&#39;re used in the template and type annotations</li></ul></li></ol> <p>These are linting warnings and won&#39;t prevent the code from running.</p> <hr> <h2 id="eslint-errors-to-fix">ESLint Errors to Fix<a class="fa fa-anchor" href="#eslint-errors-to-fix" onclick="event.stopPropagation()"></a></h2> <h3 id="error-1-types-ts-array-type-and-delimiter-issues">Error 1: types.ts Array Type and Delimiter Issues<a class="fa fa-anchor" href="#error-1-types-ts-array-type-and-delimiter-issues" onclick="event.stopPropagation()"></a></h3> <p><strong>Location</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/types/types.ts:95-101</code></p> <p><strong>Errors</strong>:</p> <ol><li>Line 95: Array type using <code class="hljs inline no-lang">T[]</code> is forbidden for non-simple types - should use <code class="hljs inline no-lang">Array&lt;T&gt;</code></li> <li>Lines 96-99: Missing semicolons after each property</li> <li>Line 101: Array type using <code class="hljs inline no-lang">Array&lt;T&gt;</code> is forbidden for simple types - should use <code class="hljs inline no-lang">T[]</code></li></ol> <p><strong>Current Code (Broken)</strong>:</p> <pre><code class="hljs typescript"><span>lines?: {
+</span><span>  <span class="hljs-attr">lineNumber</span>: <span class="hljs-built_in">number</span>;
+</span><span>  author: { <span class="hljs-attr">gitId</span>: <span class="hljs-built_in">string</span> };
+</span><span>  content: <span class="hljs-built_in">string</span>;
+</span><span>  isFullCredit: <span class="hljs-built_in">boolean</span>
+</span><span>}[];
+</span><span>segments?: <span class="hljs-built_in">Array</span>&lt;AuthorshipFileSegment&gt;;
+</span></code></pre><p><strong>Issues</strong>:</p> <ul><li>The <code class="hljs inline no-lang">lines</code> property has a complex object type array <code class="hljs inline no-lang">{ ... }[]</code> which ESLint requires to be <code class="hljs inline no-lang">Array&lt;{ ... }&gt;</code></li> <li>Properties inside the object type are missing semicolons (lines 96-99)</li> <li>The <code class="hljs inline no-lang">segments</code> property uses <code class="hljs inline no-lang">Array&lt;AuthorshipFileSegment&gt;</code> but <code class="hljs inline no-lang">AuthorshipFileSegment</code> is a simple type, so ESLint requires <code class="hljs inline no-lang">AuthorshipFileSegment[]</code></li></ul> <p><strong>Fix Required</strong>:</p> <pre><code class="hljs typescript"><span>lines?: <span class="hljs-built_in">Array</span>&lt;{
+</span><span>  <span class="hljs-attr">lineNumber</span>: <span class="hljs-built_in">number</span>;
+</span><span>  author: { <span class="hljs-attr">gitId</span>: <span class="hljs-built_in">string</span> };
+</span><span>  content: <span class="hljs-built_in">string</span>;
+</span><span>  isFullCredit: <span class="hljs-built_in">boolean</span>;
+</span><span>}&gt;;
+</span><span>segments?: AuthorshipFileSegment[];
+</span></code></pre><p><strong>Explanation</strong>:</p> <ul><li>Complex object types in arrays must use <code class="hljs inline no-lang">Array&lt;{ ... }&gt;</code> syntax</li> <li>All properties inside interface/type definitions need semicolons as delimiters</li> <li>Simple types (like <code class="hljs inline no-lang">AuthorshipFileSegment</code>) should use <code class="hljs inline no-lang">T[]</code> syntax for consistency</li></ul> <h3 id="error-2-c-global-file-browser-vue-array-type-and-import-order">Error 2: c-global-file-browser.vue Array Type and Import Order<a class="fa fa-anchor" href="#error-2-c-global-file-browser-vue-array-type-and-import-order" onclick="event.stopPropagation()"></a></h3> <p><strong>Location</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/components/c-global-file-browser.vue</code></p> <p><strong>Errors</strong>:</p> <ol><li>Line 49: Import order - <code class="hljs inline no-lang">minimatch</code> should come before local imports</li> <li>Line 70: <code class="hljs inline no-lang">GlobalFileEntry[]</code> should be <code class="hljs inline no-lang">Array&lt;GlobalFileEntry&gt;</code> (return type)</li> <li>Line 107: <code class="hljs inline no-lang">AuthorshipFileSegment[]</code> should use <code class="hljs inline no-lang">Array&lt;AuthorshipFileSegment&gt;</code> (needs verification)</li></ol> <p><strong>Current Import Order (Broken)</strong>:</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">import</span> { defineComponent, PropType } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
+</span><span><span class="hljs-keyword">import</span> { GlobalFileEntry, AuthorshipFileSegment } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../types/types&#39;</span>;
+</span><span><span class="hljs-keyword">import</span> cSegmentCollection <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;./c-segment-collection.vue&#39;</span>;
+</span><span><span class="hljs-keyword">import</span> { minimatch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;minimatch&#39;</span>;  <span class="hljs-comment">// ❌ External import after local imports</span>
+</span></code></pre><p><strong>Fixed Import Order</strong>:</p> <pre><code class="hljs typescript"><span><span class="hljs-keyword">import</span> { defineComponent, PropType } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
+</span><span><span class="hljs-keyword">import</span> { minimatch } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;minimatch&#39;</span>;  <span class="hljs-comment">// ✅ External imports before local</span>
+</span><span><span class="hljs-keyword">import</span> { GlobalFileEntry, AuthorshipFileSegment } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../types/types&#39;</span>;
+</span><span><span class="hljs-keyword">import</span> cSegmentCollection <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;./c-segment-collection.vue&#39;</span>;
+</span></code></pre><p><strong>Array Type Issues</strong>:</p> <ul><li>Return types and parameters should follow the same array type rules as interfaces</li> <li>Need to check line 70 and 107 for consistency</li></ul> <h3 id="error-3-c-summary-vue-unused-variables">Error 3: c-summary.vue Unused Variables<a class="fa fa-anchor" href="#error-3-c-summary-vue-unused-variables" onclick="event.stopPropagation()"></a></h3> <p><strong>Location</strong>: <code class="hljs inline no-lang">/Users/sky/CS3281/RepoSense/frontend/src/views/c-summary.vue</code></p> <p><strong>Errors</strong>:</p> <ol><li>Line 74: <code class="hljs inline no-lang">cGlobalFileBrowser</code> is defined but never used</li> <li>Line 82: <code class="hljs inline no-lang">GlobalFileEntry</code> is defined but never used</li></ol> <p><strong>Analysis</strong>:
+These are likely <strong>false positives</strong> because:</p> <ul><li><code class="hljs inline no-lang">cGlobalFileBrowser</code> is used in the template (line 35: <code class="hljs inline no-lang">c-global-file-browser</code>)</li> <li><code class="hljs inline no-lang">GlobalFileEntry</code> is used in the data type annotation (line 137: <code class="hljs inline no-lang">globalFiles: GlobalFileEntry[]</code>)</li></ul> <p><strong>Potential Fixes</strong>:</p> <p><strong>Option A</strong>: Remove explicit return type annotation from <code class="hljs inline no-lang">data()</code> function</p> <pre><code class="hljs typescript"><span><span class="hljs-comment">// Current (with explicit return type)</span>
+</span><span>data(): {
+</span><span>  <span class="hljs-comment">// ... long type annotation including GlobalFileEntry[]</span>
+</span><span>} {
+</span><span>  <span class="hljs-keyword">return</span> { ... }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-comment">// Simplified (let TypeScript infer)</span>
+</span><span><span class="hljs-function"><span class="hljs-title">data</span>(<span class="hljs-params"></span>)</span> {
+</span><span>  <span class="hljs-keyword">return</span> {
+</span><span>    <span class="hljs-attr">globalFiles</span>: [] <span class="hljs-keyword">as</span> GlobalFileEntry[],  <span class="hljs-comment">// Type assertion here instead</span>
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>  }
+</span><span>}
+</span></code></pre><p><strong>Option B</strong>: Add ESLint ignore comments</p> <pre><code class="hljs typescript"><span><span class="hljs-comment">// eslint-disable-next-line @typescript-eslint/no-unused-vars</span>
+</span><span><span class="hljs-keyword">import</span> cGlobalFileBrowser <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;../components/c-global-file-browser.vue&#39;</span>;
+</span></code></pre><p><strong>Recommended</strong>: Option A - removes the long return type annotation and uses inline type assertions where needed. This is cleaner and matches modern TypeScript/Vue patterns.</p></div> <nav id="page-nav" class="fixed-header-padding" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"></div><!--]--><!--v-if--></nav></div> <footer><div class="text-center"><p>[<strong>This site was generated using <img src="https://markbind.org/favicon.ico" width="25"> <a href="https://markbind.org/">MarkBind 6.1.0</a></strong> on Sun, 25 Jan 2026, 16:27:55 UTC]<br> <span class="dimmed"><small><small>favicon.ico of this site was made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></small></span></p></div></footer><!--]--></div>
+</body><script src="/2026/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/2026/markbind/js/polyfill.min.js"></script>
+<script src="/2026/markbind/js/vue.global.prod.min.js"></script>
+<script src="/2026/markbind/js/markbind.min.js"></script>
+<script src="week2.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+</html>
