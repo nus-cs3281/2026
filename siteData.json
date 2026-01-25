@@ -518,8 +518,7 @@
     {
       "src": "students/iZUMi-kyouka/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "github-copilot": "Github Copilot"
       },
       "headingKeywords": {}
     },
@@ -627,20 +626,19 @@
         "tool-technology-1-13": "Tool/Technology 1",
         "tool-technology-2-13": "Tool/Technology 2",
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
+        "github-copilot": "Github Copilot",
+        "koh-wee-jean": "KOH WEE JEAN",
         "tool-technology-1-14": "Tool/Technology 1",
         "tool-technology-2-14": "Tool/Technology 2",
-        "koh-wee-jean": "KOH WEE JEAN",
+        "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
         "tool-technology-1-15": "Tool/Technology 1",
         "tool-technology-2-15": "Tool/Technology 2",
-        "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
+        "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
         "tool-technology-1-16": "Tool/Technology 1",
         "tool-technology-2-16": "Tool/Technology 2",
-        "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
-        "tool-technology-1-17": "Tool/Technology 1",
-        "tool-technology-2-17": "Tool/Technology 2",
         "yong-jun-xi": "YONG JUN XI",
-        "tool-technology-1-18": "Tool/Technology 1",
-        "tool-technology-2-18": "Tool/Technology 2"
+        "tool-technology-1-17": "Tool/Technology 1",
+        "tool-technology-2-17": "Tool/Technology 2"
       },
       "headingKeywords": {}
     },
