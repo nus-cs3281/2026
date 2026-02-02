@@ -365,8 +365,8 @@
     {
       "src": "students/PhoebeY05/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "github-copilot": "GitHub Copilot",
+        "data-migration": "Data Migration"
       },
       "headingKeywords": {}
     },
@@ -639,16 +639,16 @@
         "tool-technology-1-12": "Tool/Technology 1",
         "tool-technology-2-13": "Tool/Technology 2",
         "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
+        "github-copilot-4": "GitHub Copilot",
+        "data-migration": "Data Migration",
+        "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
         "tool-technology-1-13": "Tool/Technology 1",
         "tool-technology-2-14": "Tool/Technology 2",
-        "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
-        "tool-technology-1-14": "Tool/Technology 1",
-        "tool-technology-2-15": "Tool/Technology 2",
         "yong-jun-xi": "YONG JUN XI",
         "general-knowledge": "General Knowledge",
         "testing": "Testing",
         "tools": "Tools",
-        "github-copilot-4": "Github Copilot",
+        "github-copilot-5": "Github Copilot",
         "vscode": "VSCode"
       },
       "headingKeywords": {}
