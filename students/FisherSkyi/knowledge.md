@@ -19,6 +19,10 @@ the `:key` attribute is a special directive used by Vue.js (which is being rende
 | `v-for` | A Vue.js directive used to render a list of items by iterating over an array or object. |
 | `:key` | `:` is shorthand for `v-bind`, which binds the value of the attribute to a JavaScript expression. In this case, it binds the `key` attribute to dynamic variable `day.date`. |
 
+In Vue, custom events emitted with `emit()` from a child component can be listened to in the parent component using the `@event-name` syntax.
+
+But they are ***only*** received by the ***immediate*** parent component.
+
 
 ### Pug
 
@@ -54,6 +58,15 @@ How does `tooltip` component know about `tooltip-text`? In `style.css`, we have:
 | Tag | Explanation |
 |---------|-------------|
 | `<span>` | The `<span>` tag is an **inline container** used to mark up a part of a text |
+
+### ESLint
+
+Need `cd` into the frontend folder to run eslint commands.
+
+```bash
+cd frontend
+npm run lint -- --fix
+```
 
 ## DevOps
 

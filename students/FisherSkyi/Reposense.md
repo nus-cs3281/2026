@@ -39,3 +39,22 @@ Filtering Patterns
 
 Existing glob filtering uses minimatch library with options: { matchBase: true, dot: true }
 
+- 'update:file-filter-scope'
+Purpose: Updates the parent component's fileFilterScope prop value
+Pattern: This follows Vue's v-model convention (two-way binding)
+What it does: Syncs the selected value ("global" or "local") back to the parent component (c-summary.vue)
+- 'get-filtered'
+Purpose: Triggers the parent to refresh/refilter the data
+Pattern: Side-effect event (action trigger)
+What it does: In your PR, when the scope changes to "global", this triggers the watcher in c-summary.vue that loads all authorship data and opens the file browser tab
+
+1. User switches file filter scope to "global" in c-summary-header.vue
+1. ***c-summary-header.vue*** emits `update:file-filter-scope`
+1. ***c-summary.vue***'s `fileFilterScope` data updates (via v-model)
+1. The watcher on `fileFilterScope` triggers (c-summary.vue:218-233)
+1. It loads the global files and emits `view-file-browser` with the files data
+2. `c-home.vue` listens for `view-file-browser` and reemit
+3. `app.vue` receives the event and calls openFileBrowser(files)
+4. openFileBrowser calls activateTab('file-browser')
+5. c-home.vue receives tabType='file-browser' as a prop
+6. The global file browser renders in the right panel
