@@ -58,3 +58,7 @@ What it does: In your PR, when the scope changes to "global", this triggers the 
 4. openFileBrowser calls activateTab('file-browser')
 5. c-home.vue receives tabType='file-browser' as a prop
 6. The global file browser renders in the right panel
+
+Install MarkBind using command: npm install -g markbind-cli@latest
+Navigate to the docs folder.
+Run command: markbind serve
