@@ -159,6 +159,15 @@
       "headingKeywords": {}
     },
     {
+      "src": "students/FisherSkyi/issue_on_cypress_dg.md",
+      "headings": {
+        "headless-ci-mode": "Headless (CI mode)",
+        "interactive-gui-debug-mode": "Interactive GUI (debug mode)",
+        "from-frontend": "From frontend/"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "students/FisherSkyi/knowledge.md",
       "headings": {
         "project-knowledge": "Project Knowledge",
