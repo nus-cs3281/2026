@@ -30,3 +30,15 @@
   - Change bump version to pull_request_target trigger ([#41](https://github.com/git-mastery/app/pull/41))
   - Add AGENTS.md ([#20](https://github.com/git-mastery/git-autograder/pull/20))
   - Improve verify logic of T6L5/mix-messy-docs ([#255](https://github.com/git-mastery/exercises/pull/255))
+
+## Week 4
+
+- Reviewed PRs: [#243](https://github.com/git-mastery/exercises/pull/243), [#63](https://github.com/git-mastery/git-mastery/pull/63), [#257](https://github.com/git-mastery/exercises/pull/253), [#257](https://github.com/git-mastery/exercises/pull/257), [#44](https://github.com/git-mastery/app/pull/44), [#259](https://github.com/git-mastery/exercises/pull/259)
+- Implemeted PRs:
+  - E2E App Testing Strategy Examples [#43](https://github.com/git-mastery/app/pull/43)
+  - Implement hands-on T8L4/hp-remote-branch-rename [#258](https://github.com/git-mastery/exercises/pull/258)
+  - Improve verify logic and update tests remote-branch-rename ([#260](https://github.com/git-mastery/exercises/pull/260))
+- Issues created:
+  - Unable to force delete local branch[#23](https://github.com/git-mastery/exercises/pull/253)
+- RFCs created:
+  - [E2E App Testing Strategy](https://docs.google.com/document/d/101Qh5SiW-MZGy3DH0lLvn2lqRutxkTKbx01A8dNyI6o/edit?tab=t.0)
