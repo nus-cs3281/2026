@@ -1,7 +1,10 @@
-### Tool/Technology 1
+### AI Coding Tools
 
-List the aspects you learned, and the resources you used to learn them, and a brief summary of each resource.
+#### Skills
 
-### Tool/Technology 2
+Worked with the team to explore adding repo-specific AI coding skills for common harnesses such as Claude, OpenCode and GitHub Copilot.
 
-...
+#### Subagents
+
+Created subagents to handle specific tasks such as writing unit tests, generating documentation, and refactoring code.
+
