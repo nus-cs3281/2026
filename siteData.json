@@ -424,9 +424,15 @@
       "headings": {
         "general-knowledge": "General Knowledge",
         "testing": "Testing",
+        "design-patterns": "Design Patterns",
+        "tips": "Tips",
         "tools": "Tools",
         "github-copilot": "Github Copilot",
-        "vscode": "VSCode"
+        "vscode": "VSCode",
+        "git": "Git",
+        "testng": "TestNG",
+        "gradle": "Gradle",
+        "hibernate": "Hibernate"
       },
       "headingKeywords": {}
     },
@@ -671,9 +677,15 @@
         "yong-jun-xi": "YONG JUN XI",
         "general-knowledge": "General Knowledge",
         "testing": "Testing",
+        "design-patterns": "Design Patterns",
+        "tips": "Tips",
         "tools": "Tools",
         "github-copilot-6": "Github Copilot",
-        "vscode": "VSCode"
+        "vscode": "VSCode",
+        "git": "Git",
+        "testng": "TestNG",
+        "gradle-2": "Gradle",
+        "hibernate": "Hibernate"
       },
       "headingKeywords": {}
     },
