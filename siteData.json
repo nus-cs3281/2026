@@ -635,6 +635,18 @@
         "langchain": "Langchain",
         "hon-yi-hao": "HON YI HAO",
         "ai-coding-tools": "AI Coding Tools",
+        "skills": "Skills",
+        "subagents": "Subagents",
+        "vue": "Vue",
+        "reactivity-vue-3": "Reactivity (Vue 3)",
+        "typescript-migration": "TypeScript migration",
+        "tsc": "tsc",
+        "pdf-generation-for-markbind-sites": "PDF generation for MarkBind sites",
+        "applications": "Applications",
+        "experimentation": "Experimentation",
+        "challenges": "Challenges",
+        "solved-i-think": "Solved (i think)",
+        "outstanding-issues": "Outstanding issues",
         "open": "Open",
         "dallas-lim-juin-loon": "DALLAS LIM JUIN LOON",
         "tool-technology-1-3": "Tool/Technology 1",
@@ -834,7 +846,19 @@
     {
       "src": "students/yihao03/knowledge.md",
       "headings": {
-        "ai-coding-tools": "AI Coding Tools"
+        "ai-coding-tools": "AI Coding Tools",
+        "skills": "Skills",
+        "subagents": "Subagents",
+        "vue": "Vue",
+        "reactivity-vue-3": "Reactivity (Vue 3)",
+        "typescript-migration": "TypeScript migration",
+        "tsc": "tsc",
+        "pdf-generation-for-markbind-sites": "PDF generation for MarkBind sites",
+        "applications": "Applications",
+        "experimentation": "Experimentation",
+        "challenges": "Challenges",
+        "solved-i-think": "Solved (i think)",
+        "outstanding-issues": "Outstanding issues"
       },
       "headingKeywords": {}
     },
@@ -842,7 +866,12 @@
       "src": "students/yihao03/progress.md",
       "headings": {
         "overview": "Overview",
-        "prs-created": "PRs Created"
+        "prs-created": "PRs Created",
+        "pr-details": "PR Details",
+        "2834-migrate-packages-vue-components-utils-files-to-ts": "#2834  Migrate packages/vue-components Utils files to TS",
+        "2828-add-card-counts-to-tag": "#2828  Add Card Counts to Tag",
+        "2824-add-setup-to-pretest-script": "#2824  Add setup to pretest script",
+        "2809-implement-custom-cardstack-tag-colors-and-order": "#2809  Implement custom cardstack tag colors and order"
       },
       "headingKeywords": {}
     },
