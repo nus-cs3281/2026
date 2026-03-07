@@ -13,4 +13,8 @@
 | 4 | Test Drive: [Tour 8](https://github.com/git-mastery/exercises/issues/261#issuecomment-3864512381) |
 | 4 | Authored PR: [Implement hands-on T8L3/remote-branch-delete](https://github.com/git-mastery/exercises/pull/259) |
 | 4 | Review PR: [Add catch all route to redirect to index route](https://github.com/git-mastery/progress-dashboard/pull/22) |
+| 5 | Authored RFC: [Git-Mastery REPL for users](https://docs.google.com/document/d/1Xr-ppB1TLQtQB_tvPvOtSi2_h4xAhqMEEM4JxbVy368) |
+| 6/7 | Authored PR: [Git-Mastery REPL for users](https://github.com/git-mastery/app/pull/55) |
+| 7 | Review PR: [Add pre-commit hooks using LeftHook](https://github.com/git-mastery/exercises/pull/265) |
+| 7 | Review PR: [Add precommit installation in setup guide](https://github.com/git-mastery/developers/pull/4) |
 
