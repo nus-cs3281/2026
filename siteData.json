@@ -368,8 +368,12 @@
     {
       "src": "students/Nsohko/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "cursor": "Cursor",
+        "agents-md": "agents.md",
+        "openai-api": "OpenAI API",
+        "prompt-engineering-for-software-engineering-tasks": "Prompt Engineering for Software Engineering Tasks",
+        "ai-assisted-debugging-and-refactoring": "AI-Assisted Debugging and Refactoring",
+        "rapid-prototyping-of-ai-features": "Rapid Prototyping of AI Features"
       },
       "headingKeywords": {}
     },
@@ -688,8 +692,12 @@
         "github-copilot-5": "GitHub Copilot",
         "data-migration": "Data Migration",
         "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
-        "tool-technology-1-8": "Tool/Technology 1",
-        "tool-technology-2-9": "Tool/Technology 2",
+        "cursor": "Cursor",
+        "agents-md": "agents.md",
+        "openai-api": "OpenAI API",
+        "prompt-engineering-for-software-engineering-tasks": "Prompt Engineering for Software Engineering Tasks",
+        "ai-assisted-debugging-and-refactoring": "AI-Assisted Debugging and Refactoring",
+        "rapid-prototyping-of-ai-features": "Rapid Prototyping of AI Features",
         "yong-jun-xi": "YONG JUN XI",
         "general-knowledge": "General Knowledge",
         "testing": "Testing",
