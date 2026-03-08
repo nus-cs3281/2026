@@ -488,8 +488,13 @@
     {
       "src": "students/ashmitahaldar/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "ai-coding-tools": "AI Coding Tools",
+        "terminal-uis": "Terminal UIs",
+        "yaml-files": ".yaml files",
+        "github-actions": "GitHub Actions",
+        "calling-llms-in-programs": "Calling LLMs in Programs",
+        "github-worktrees": "GitHub Worktrees",
+        "java-packages": "Java Packages"
       },
       "headingKeywords": {}
     },
@@ -664,8 +669,13 @@
         "tool-technology-1-5": "Tool/Technology 1",
         "tool-technology-2-6": "Tool/Technology 2",
         "haldar-ashmita": "HALDAR ASHMITA",
-        "tool-technology-1-6": "Tool/Technology 1",
-        "tool-technology-2-7": "Tool/Technology 2",
+        "ai-coding-tools-2": "AI Coding Tools",
+        "terminal-uis": "Terminal UIs",
+        "yaml-files": ".yaml files",
+        "github-actions": "GitHub Actions",
+        "calling-llms-in-programs": "Calling LLMs in Programs",
+        "github-worktrees": "GitHub Worktrees",
+        "java-packages": "Java Packages",
         "yu-letian": "YU LETIAN",
         "project-knowledge": "Project Knowledge",
         "vue-js": "Vue.js",
@@ -682,8 +692,8 @@
         "claude": "Claude",
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
-        "tool-technology-1-7": "Tool/Technology 1",
-        "tool-technology-2-8": "Tool/Technology 2",
+        "tool-technology-1-6": "Tool/Technology 1",
+        "tool-technology-2-7": "Tool/Technology 2",
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
         "github-copilot-4": "Github Copilot",
         "koh-wee-jean": "KOH WEE JEAN",
