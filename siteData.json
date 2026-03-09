@@ -672,8 +672,12 @@
         "opencode": "OpenCode",
         "qml": "QML",
         "gabriel-mario-antaputra": "GABRIEL MARIO ANTAPUTRA",
-        "tool-technology-1-2": "Tool/Technology 1",
-        "tool-technology-2-3": "Tool/Technology 2",
+        "electron": "Electron",
+        "react-typescript": "React (Typescript)",
+        "tailwind-css": "Tailwind CSS",
+        "redux": "Redux",
+        "prompt-and-context-engineering": "Prompt and Context Engineering",
+        "using-github-copilot-code-review": "Using Github Copilot Code Review",
         "reposense": "RepoSense",
         "chen-yizhong": "CHEN YIZHONG",
         "tool-technology-1-github-copilot": "Tool/Technology 1: GitHub Copilot",
@@ -702,8 +706,8 @@
         "claude": "Claude",
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
-        "tool-technology-1-3": "Tool/Technology 1",
-        "tool-technology-2-4": "Tool/Technology 2",
+        "tool-technology-1-2": "Tool/Technology 1",
+        "tool-technology-2-3": "Tool/Technology 2",
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
         "github-copilot-4": "Github Copilot",
         "koh-wee-jean": "KOH WEE JEAN",
@@ -849,14 +853,27 @@
     {
       "src": "students/thegrimbee/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "electron": "Electron",
+        "react-typescript": "React (Typescript)",
+        "tailwind-css": "Tailwind CSS",
+        "redux": "Redux",
+        "prompt-and-context-engineering": "Prompt and Context Engineering",
+        "using-github-copilot-code-review": "Using Github Copilot Code Review"
       },
       "headingKeywords": {}
     },
     {
       "src": "students/thegrimbee/progress.md",
-      "headings": {},
+      "headings": {
+        "week-1": "Week 1",
+        "week-2": "Week 2",
+        "week-3": "Week 3",
+        "week-4": "Week 4",
+        "week-5": "Week 5",
+        "week-6": "Week 6",
+        "recess-week": "Recess Week",
+        "week-7": "Week 7"
+      },
       "headingKeywords": {}
     },
     {
