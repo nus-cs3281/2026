@@ -540,23 +540,30 @@
     {
       "src": "students/gerteck/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "tool-technology": "Tool/Technology",
+        "claude-code-and-amp-ai-agents": "Claude Code &amp; AI Agents",
+        "copilot-code-review": "Copilot Code Review",
+        "soft-skills-and-knowledge": "Soft Skills and Knowledge"
       },
       "headingKeywords": {}
     },
     {
       "src": "students/gerteck/observations.md",
       "headings": {
-        "project-foo": "Project: Foo",
+        "project-all-contributors-app": "Project: All-Contributors App",
         "my-contributions": "My Contributions",
-        "my-learning-record": "My Learning Record"
+        "project-mihon": "Project: Mihon",
+        "my-contributions-2": "My Contributions",
+        "open-source-my-learning-record": "Open Source: My Learning Record"
       },
       "headingKeywords": {}
     },
     {
       "src": "students/gerteck/progress.md",
-      "headings": {},
+      "headings": {
+        "summary": "Summary",
+        "lead-and-amp-technical-contributions": "Lead &amp; Technical Contributions"
+      },
       "headingKeywords": {}
     },
     {
@@ -770,31 +777,33 @@
         "observations-from-external-projects": "Observations from External Projects",
         "markbind": "MarkBind",
         "chan-ger-teck": "CHAN GER TECK",
-        "project-foo": "Project: Foo",
+        "project-all-contributors-app": "Project: All-Contributors App",
         "my-contributions": "My Contributions",
-        "my-learning-record": "My Learning Record",
+        "project-mihon": "Project: Mihon",
+        "my-contributions-2": "My Contributions",
+        "open-source-my-learning-record": "Open Source: My Learning Record",
         "open": "Open",
         "loh-ze-qing-norbert": "LOH ZE QING, NORBERT",
-        "project-foo-2": "Project: Foo",
-        "my-contributions-2": "My Contributions",
-        "my-learning-record-2": "My Learning Record",
-        "misra-aditya": "MISRA ADITYA",
-        "project-foo-3": "Project: Foo",
+        "project-foo": "Project: Foo",
         "my-contributions-3": "My Contributions",
-        "my-learning-record-3": "My Learning Record",
-        "soh-zheng-yang-marcus": "SOH ZHENG YANG, MARCUS",
-        "project-foo-4": "Project: Foo",
+        "my-learning-record": "My Learning Record",
+        "misra-aditya": "MISRA ADITYA",
+        "project-foo-2": "Project: Foo",
         "my-contributions-4": "My Contributions",
-        "my-learning-record-4": "My Learning Record",
+        "my-learning-record-2": "My Learning Record",
+        "soh-zheng-yang-marcus": "SOH ZHENG YANG, MARCUS",
+        "project-foo-3": "Project: Foo",
+        "my-contributions-5": "My Contributions",
+        "my-learning-record-3": "My Learning Record",
         "teammates": "TEAMMATES",
         "ching-ming-yuan": "CHING MING YUAN",
-        "project-foo-5": "Project: Foo",
-        "my-contributions-5": "My Contributions",
-        "my-learning-record-5": "My Learning Record",
-        "dhiraputta-pathama-tengara": "DHIRAPUTTA PATHAMA TENGARA",
-        "project-foo-6": "Project: Foo",
+        "project-foo-4": "Project: Foo",
         "my-contributions-6": "My Contributions",
-        "my-learning-record-6": "My Learning Record"
+        "my-learning-record-4": "My Learning Record",
+        "dhiraputta-pathama-tengara": "DHIRAPUTTA PATHAMA TENGARA",
+        "project-foo-5": "Project: Foo",
+        "my-contributions-7": "My Contributions",
+        "my-learning-record-5": "My Learning Record"
       },
       "headingKeywords": {}
     },
