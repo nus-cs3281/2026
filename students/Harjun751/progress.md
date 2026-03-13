@@ -11,3 +11,10 @@
 |                                   | PR: Update fenced code block color legibility ([#2816](https://github.com/MarkBind/markbind/pull/2816)) <popover src="./fenced-code-block-example.md">(Example)</popover>
 | 5                                 | Epic PR: CLI TypeScript migration ([#2830](https://github.com/MarkBind/markbind/pull/2830))                                     |
 |                                   | Discussion: A detailed proposal on overhauling CLI Testing ([#2831](https://github.com/MarkBind/markbind/issues/2831))
+|                                   | Meeting Teachback: DON'T DELETE PACKAGE-LOCK
+|6                                  | Open PR: Migrate CLI output from CJS to ESM ([#2836](https://github.com/MarkBind/markbind/pull/2836)) |
+|                                   | Minor PR: Fix `markbind serve` regression ([#2837](https://github.com/MarkBind/markbind/pull/2837)) |
+|                                   | Closed PR: Migrate node to v22 ([#2838](https://github.com/MarkBind/markbind/pull/2838)) |
+| Recess Week                       | Studying :>)|
+| 7 | PR: Migrate CLI output from CJS to ESM ([#2836](https://github.com/MarkBind/markbind/pull/2836)) |
+| 8 | PR: Upgrade winston dependency to v3 ([#2838](https://github.com/MarkBind/markbind/pull/2838)) |
