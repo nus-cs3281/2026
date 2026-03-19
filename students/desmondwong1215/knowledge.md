@@ -87,3 +87,17 @@ GitHub Copilot is a sophisticated AI-powered developer tool that functions as an
 <b>Resources:</b>
 * [Github Copilot Documentation](https://docs.github.com/en/copilot)
 * [Voiceflow: How to Prevent LLM Hallucinations](https://www.voiceflow.com/blog/prevent-llm-hallucinations)
+
+### ChatGPT Codex App
+
+ChatGPT Codex App is an AI coding assistant that helps developers go from idea to working code faster. Instead of only suggesting the next line, it can help with planning, implementation, debugging, and documentation, so it feels more like a practical coding partner in day-to-day work.
+
+<b>Learning Points:</b>
+* <b>Turn plain language into real coding tasks:</b> We can describe the task (debugging, fixing bugs, new implementation, etc) to Codex. Codex can give me a detailed implementation plan before it starting coding. We can exchange idea to better improve our approaches. Once we have reached an agreement, then started coding. Streamline the process, and speed up the development cycle
+* <b>Use project context for better output:</b> Codex gives much stronger suggestions when it can read the relevant files first, because it can follow the repo's structure, naming style, and existing patterns.
+* <b>Reduce mistakes with quick verification:</b> A good habit is to ask Codex to explain assumptions, point to specific files, and run checks or tests so the final result is safer and more accurate.
+* <b>Speed up debugging work:</b> It can help trace likely root causes, propose focused fixes, and produce small patches that are easier for teammates to review.
+* <b>Write clearer docs faster:</b> Codex is also useful for drafting PR summaries, technical notes, and simple explanations for complex code changes.
+
+<b>Resources:</b>
+* [Best Practices when Using Codex](https://developers.openai.com/codex/learn/best-practices)
