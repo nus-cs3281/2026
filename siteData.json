@@ -522,9 +522,11 @@
     {
       "src": "students/desmondwong1215/knowledge.md",
       "headings": {
-        "github-copilot": "Github Copilot",
         "coderabbit": "CodeRabbit",
-        "claude-agent-skills": "Claude Agent Skills"
+        "claude-agent-skills": "Claude Agent Skills",
+        "git-worktree": "Git Worktree",
+        "github-copilot": "Github Copilot",
+        "chatgpt-codex-app": "ChatGPT Codex App"
       },
       "headingKeywords": {}
     },
@@ -638,15 +640,17 @@
         "knowledge-gained-from-projects": "Knowledge gained from Projects",
         "git-mastery": "Git-Mastery",
         "desmond-wong-hui-sheng": "DESMOND WONG HUI SHENG",
-        "github-copilot": "Github Copilot",
         "coderabbit": "CodeRabbit",
         "claude-agent-skills": "Claude Agent Skills",
+        "git-worktree": "Git Worktree",
+        "github-copilot": "Github Copilot",
+        "chatgpt-codex-app": "ChatGPT Codex App",
         "goyal-vikram": "GOYAL VIKRAM",
         "tool-technology-1": "Tool/Technology 1",
         "tool-technology-2": "Tool/Technology 2",
         "jovan-ng-chengen": "JOVAN NG CHENGEN",
         "knowledge": "Knowledge",
-        "chatgpt-codex-app": "ChatGPT Codex App",
+        "chatgpt-codex-app-2": "ChatGPT Codex App",
         "loh-jia-xin": "LOH JIA XIN",
         "github-copilot-2": "GitHub Copilot",
         "claude-code": "Claude Code",
