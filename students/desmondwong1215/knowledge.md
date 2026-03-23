@@ -93,7 +93,7 @@ GitHub Copilot is a sophisticated AI-powered developer tool that functions as an
 ChatGPT Codex App is an AI coding assistant that helps developers go from idea to working code faster. Instead of only suggesting the next line, it can help with planning, implementation, debugging, and documentation, so it feels more like a practical coding partner in day-to-day work.
 
 <b>Learning Points:</b>
-* <b>Turn plain language into real coding tasks:</b> We can describe the task (debugging, fixing bugs, new implementation, etc) to Codex. Codex can give me a detailed implementation plan before it starting coding. We can exchange idea to better improve our approaches. Once we have reached an agreement, then started coding. Streamline the process, and speed up the development cycle
+* <b>Turn plain language into real coding tasks:</b> We can describe the task (debugging, fixing bugs, new implementation, etc) to Codex. Codex can give me a detailed implementation plan before it starting coding. We can exchange idea to better improve our approaches. Once we have reached an agreement, then started coding. Streamline the process, and speed up the development cycle.
 * <b>Use project context for better output:</b> Codex gives much stronger suggestions when it can read the relevant files first, because it can follow the repo's structure, naming style, and existing patterns.
 * <b>Reduce mistakes with quick verification:</b> A good habit is to ask Codex to explain assumptions, point to specific files, and run checks or tests so the final result is safer and more accurate.
 * <b>Speed up debugging work:</b> It can help trace likely root causes, propose focused fixes, and produce small patches that are easier for teammates to review.
@@ -101,3 +101,69 @@ ChatGPT Codex App is an AI coding assistant that helps developers go from idea t
 
 <b>Resources:</b>
 * [Best Practices when Using Codex](https://developers.openai.com/codex/learn/best-practices)
+
+### GitHub Actions
+
+GitHub Actions is a CI/CD automation platform built into GitHub that lets us run workflows directly from our repository. It helps automate repetitive engineering tasks like testing, linting, building, and deployment whenever events such as push, pull request, or manual dispatch happen.
+
+<b>Learning Points:</b>
+* <b>Automate development workflow:</b> We can define workflows in YAML files under `.github/workflows` to automatically run checks and scripts, which reduces manual work and human error.
+* <b>Protect code quality in pull requests:</b> By running unit tests, lint checks, and security scans on every PR, GitHub Actions helps us catch issues early before merging.
+* <b>Use event-driven pipelines:</b> Workflows can be triggered by repository events (e.g., `push`, `pull_request`, `release`) so automation happens at the right stage of the development cycle.
+* <b>Reuse and scale with actions:</b> We can use community actions from GitHub Marketplace or create our own custom actions to keep workflows modular and maintainable.
+* <b>Secure secrets and deployments:</b> GitHub Actions integrates with encrypted secrets and environment protection rules, allowing safer automation for deployment and external service integration.
+
+<b>Common Usage:</b><br>
+Create a workflow file at `.github/workflows/ci.yml` and define jobs for testing/building.
+
+An `Action` is a packaged automation step we can use in a workflow. There are lots of prebuilt `Actions` made by Github or third parties. We can find these reusable `Actions` from [Marketplace](https://github.com/marketplace?type=actions)
+
+```yaml
+name: CI
+
+on:
+	pull_request:
+	push:
+		branches: [ main ]
+
+jobs:
+	test:
+		runs-on: ubuntu-latest
+		steps:
+			- uses: actions/checkout@v4
+			- name: Setup Node
+				uses: actions/setup-node@v4
+				with:
+					node-version: 20
+			- run: npm ci
+			- run: npm test
+```
+
+Jobs run in parallel unless `needs` is added. Each job has its own steps, and is run in separated virtual environment. Steps inside one job run in order. 
+
+`${{}}` is Github Actions expression syntax. `{{ secrets.USERNAME }}` reads an encrypted secret at runtime, and their values are masked in logs. Secrets can be passed through `with:` or `env:`.
+
+```yaml
+jobs:
+	test:
+		runs-on: ${{ matrix.os }}
+		strategy:
+			matrix:
+				os: [ubuntu-latest, macos-latest, windows-latest]
+	steps:
+		- uses: actions/setup-node@v4
+			with: 
+				username: ${{ secrets.USERNAME }}
+				password: ${{ secrets.password }}
+		- run: echo test
+	
+	deploy:
+		needs: test
+		runs-on: ubuntu-latest
+		steps:
+			- run: echo deploy
+```
+
+<b>Resources:</b>
+* [GitHub Actions Documentation](https://docs.github.com/en/actions)
+* [GitHub Actions Marketplace](https://github.com/marketplace?type=actions)
