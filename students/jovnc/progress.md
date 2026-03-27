@@ -81,6 +81,39 @@
   - [tooling] Add pre-commit hooks using LeftHook ([#265](https://github.com/git-mastery/exercises/pull/265))
   - Set up base infrastructure for app E2E tests ([#54](https://github.com/git-mastery/app/pull/54))
 
+## Week 7
+
+- Implemented PRs:
+  - Add optimisations to E2E CI workflow ([#57](https://github.com/git-mastery/app/pull/57))
+  - Make E2E tests more comprehensive and less flaky ([#58](https://github.com/git-mastery/app/pull/58))
+- Lightning Talk: [Git Hooks Lightning Round Sharing](https://drive.google.com/file/d/1cMXc94juKlcMsiSyw3UJhH0O083Lf1WB/view?usp=sharing)
+- Documentation:
+  - Update developer documentation for precommit installation ([#4](https://github.com/git-mastery/developers/pull/4))
+
+## Week 8
+
+- Reviewed PRs: [#40](https://github.com/git-mastery/app/pull/40)
+- Implemented PRs:
+  - Split test workflow into PR and main branch push ([#59](https://github.com/git-mastery/app/pull/59))
+  - Add winget-publish action in publish.yml ([#61](https://github.com/git-mastery/app/pull/61))
+  - Update bump-version.yml to exit with status code 0 if no tag present ([#4](https://github.com/git-mastery/actions/pull/4))
+
+## Week 9
+
+- Perform release of Git-Mastery App v7.8.0
+- Reviewed PRs: [#84](https://github.com/git-mastery/app/pull/84)
+- Implemented PRs:
+  - Cache pip dependencies using requirements.txt as cache key ([#69](https://github.com/git-mastery/app/pull/69))
+  - Set up lefthook for app repository ([#76](https://github.com/git-mastery/app/pull/76))
+  - Fix winget releaser action ([#80](https://github.com/git-mastery/app/pull/80))
+
+## Week 10
+
+- Reviewed PRs: [#90](https://github.com/git-mastery/app/pull/90),[#91](https://github.com/git-mastery/app/pull/91)
+- Implemented PRs:
+  - Migrate app to uv and set up dependabot ([#83](https://github.com/git-mastery/app/pull/83))
+  - Update set up scripts in exercises repository ([#277](https://github.com/git-mastery/exercises/pull/277))
+
 ## Misc
 
 - [Vibe Coding an App](https://docs.google.com/document/d/1lkt77dtJwEmgs9pRUB1wTd2rj8HiE-I5RNihyPNzDCc/edit?tab=t.0#heading=h.56d739jgyert)
