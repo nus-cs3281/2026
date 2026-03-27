@@ -618,7 +618,9 @@
       "src": "students/jovnc/knowledge.md",
       "headings": {
         "knowledge": "Knowledge",
-        "chatgpt-codex-app": "ChatGPT Codex App"
+        "chatgpt-codex-app": "ChatGPT Codex App",
+        "claude-code": "Claude Code",
+        "git-hooks": "Git Hooks"
       },
       "headingKeywords": {}
     },
@@ -633,6 +635,10 @@
         "week-4": "Week 4",
         "week-5": "Week 5",
         "week-6": "Week 6",
+        "week-7": "Week 7",
+        "week-8": "Week 8",
+        "week-9": "Week 9",
+        "week-10": "Week 10",
         "misc": "Misc"
       },
       "headingKeywords": {}
@@ -655,9 +661,11 @@
         "jovan-ng-chengen": "JOVAN NG CHENGEN",
         "knowledge": "Knowledge",
         "chatgpt-codex-app-2": "ChatGPT Codex App",
+        "claude-code": "Claude Code",
+        "git-hooks": "Git Hooks",
         "loh-jia-xin": "LOH JIA XIN",
         "github-copilot-2": "GitHub Copilot",
-        "claude-code": "Claude Code",
+        "claude-code-2": "Claude Code",
         "tool-technology-2-2": "Tool/Technology 2",
         "san-muyun": "SAN MUYUN",
         "contextmanager": "ContextManager",
