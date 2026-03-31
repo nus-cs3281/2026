@@ -141,6 +141,31 @@ jobs:
 
 Jobs run in parallel unless `needs` is added. Each job has its own steps, and is run in separated virtual environment. Steps inside one job run in order. 
 
+{% raw %}
+`${{}}` is Github Actions expression syntax. `{{ secrets.USERNAME }}` reads an encrypted secret at runtime, and their values are masked in logs. Secrets can be passed through `with:` or `env:`.
+
+```yaml
+jobs:
+	test:
+		runs-on: ${{ matrix.os }}
+		strategy:
+			matrix:
+				os: [ubuntu-latest, macos-latest, windows-latest]
+	steps:
+		- uses: actions/setup-node@v4
+			with: 
+				username: ${{ secrets.USERNAME }}
+				password: ${{ secrets.password }}
+		- run: echo test
+	
+	deploy:
+		needs: test
+		runs-on: ubuntu-latest
+		steps:
+			- run: echo deploy
+```
+{% endraw %}
+
 <b>Resources:</b>
 * [GitHub Actions Documentation](https://docs.github.com/en/actions)
 * [GitHub Actions Marketplace](https://github.com/marketplace?type=actions)
