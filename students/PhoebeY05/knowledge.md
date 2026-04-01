@@ -31,3 +31,24 @@
         * Immediately reveals all affected files and dependencies.
 
     * The choice of approach should be made based on the scope, risk, and complexity of the migration task.
+## GCP in GitHub Actions
+
+### Deployment Credentials
+* Treating CI/CD auth as an afterthought is a real risk as deployment credentials
+  have broad cloud access, never expire by default, and are hard to rotate
+
+* Short-lived tokens (via Workload Identity Federation) eliminate an entire class
+  of risk. If a token leaks, it's expired within the hour
+
+
+### Authentication
+* Workload Identity Federation: 
+Rather than storing a credential, the pipeline proves its identity 
+    * GitHub issues a signed token containing the repo, branch, and run context, which GCP
+  validates against a trust policy configured once
+* IAM makes least privilege concrete: grant a specific role, to a specific
+  identity, on a specific resource. A compromised deploy pipeline should only be able
+  to deploy
+
+* Scoping trust by repo and branch goes further because even a fork of the same
+  codebase can't trigger a deploy.
