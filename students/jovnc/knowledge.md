@@ -26,3 +26,21 @@ List the aspects you learned, and the resources you used to learn them, and a br
   - Post-commit hooks: These run after a commit is made and can be used to trigger notifications, update documentation, or deploy code.
   - Pre-push hooks: These run before code is pushed to a remote repository and can be used to run tests, check for merge conflicts, or validate code quality.
 - Git hooks can be implemented using various tools and frameworks, such as Husky for JavaScript, Lefthook or pre-commit for Python. These tools provide an easy way to set up and manage Git hooks in a project.
+
+## Trunk Based Development
+
+A source control branching model where all developers collaborate on a single branch (`main`), avoiding long-lived branches and merge hell.
+
+**Core principles:**
+
+- Use short-lived feature branches (≤24h, ≤1k LoC) instead of committing directly to main
+- Every commit on main must be releasable — use squash merges for clean rollbacks
+- Never merge unless CI checks pass; enforce minimum approvals
+- Use feature toggles to ship incomplete features safely
+
+**Minimum viable CI/CD = Trunk Based Development + fast automated tests:**
+
+1. Unit tests — per package/function
+2. Integration tests — API-level flows on a virtual environment
+3. E2E/Synthetic tests — run on actual environment (traditionally flaky)
+4. Post-deployment tests + deployment gates
