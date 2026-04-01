@@ -1,6 +1,20 @@
 # Git-Mastery
 
-## Week 0
+## Overview
+
+- **App Infrastructure & CI/CD**: Built and optimized the E2E testing infrastructure for the app ([#54](https://github.com/git-mastery/app/pull/54), [#57](https://github.com/git-mastery/app/pull/57), [#58](https://github.com/git-mastery/app/pull/58)); split and improved CI workflows ([#59](https://github.com/git-mastery/app/pull/59)); migrated app and exercises to `uv` package manager ([#83](https://github.com/git-mastery/app/pull/83), [#279](https://github.com/git-mastery/exercises/pull/279))
+- **Windows Distribution**: Authored RFC and implemented winget publishing support for Windows users ([#61](https://github.com/git-mastery/app/pull/61), [#80](https://github.com/git-mastery/app/pull/80))
+- **Pre-commit Tooling**: Proposed and implemented Git hooks via LeftHook across the exercises and app repositories ([#265](https://github.com/git-mastery/exercises/pull/265), [#76](https://github.com/git-mastery/app/pull/76))
+- **Exercise Development**: Implemented and improved verify logic for multiple exercises (mix-messy-graph, mix-messy-docs, remote-branch-rename, branch-forward)
+- **Developer Documentation**: Restructured developer documentation ([#6](https://github.com/git-mastery/developers/pull/6)), wrote onboarding docs, and added `AGENTS.md`
+- **Bug Fixes**: Fixed critical bugs including progress sync failures, help command truncation, Arch Linux release URL, and OneDrive FileNotFound incident
+- And more! See the weekly log below for a comprehensive list of contributions.
+
+---
+
+## Weekly Log
+
+### Week 0
 
 - Implemented PRs:
   - Fix exercise undo-init ([#27](https://github.com/git-mastery/app/pull/27))
@@ -22,7 +36,7 @@
 - Documentation:
   - [Onboarding Documentations](https://docs.google.com/document/d/1Exhw-FgQHSNw4E0X0iMFz5iqe2DqMTAT4bOeHAaPvek/edit?tab=t.0#heading=h.pckfygp0q8)
 
-## Week 1
+### Week 1
 
 - Reviewed PRs: [#229](https://github.com/git-mastery/exercises/pull/229), [#236](https://github.com/git-mastery/exercises/pull/236), [#231](https://github.com/git-mastery/exercises/pull/231), [#232](https://github.com/git-mastery/exercises/pull/232), [#230](https://github.com/git-mastery/exercises/pull/230)
 - Implemented PRs:
@@ -44,7 +58,7 @@
 - Reviewed RFC:
   - [Creating remote repositories in repo-smith](https://docs.google.com/document/d/1fZOgaR6G6SdbU20g16Q2DcgCuDfYsOZeYDGydbHMYa8/edit?tab=t.0#heading=h.x8t43doyrgeb)
 
-## Week 3
+### Week 3
 
 - Reviewed PRs: [#249](https://github.com/git-mastery/exercises/pull/249),[#250](https://github.com/git-mastery/exercises/pull/250), [#251](https://github.com/git-mastery/exercises/pull/251), [#42](https://github.com/git-mastery/app/pull/42)
 - Implemented PRs:
@@ -53,7 +67,7 @@
   - Add AGENTS.md ([#20](https://github.com/git-mastery/git-autograder/pull/20))
   - Improve verify logic of T6L5/mix-messy-docs ([#255](https://github.com/git-mastery/exercises/pull/255))
 
-## Week 4
+### Week 4
 
 - Reviewed PRs: [#243](https://github.com/git-mastery/exercises/pull/243), [#63](https://github.com/git-mastery/git-mastery/pull/63), [#257](https://github.com/git-mastery/exercises/pull/253), [#257](https://github.com/git-mastery/exercises/pull/257), [#44](https://github.com/git-mastery/app/pull/44), [#259](https://github.com/git-mastery/exercises/pull/259), [#264](https://github.com/git-mastery/exercises/pull/264)
 - Implemeted PRs:
@@ -65,7 +79,7 @@
 - RFCs created:
   - [E2E App Testing Strategy](https://docs.google.com/document/d/101Qh5SiW-MZGy3DH0lLvn2lqRutxkTKbx01A8dNyI6o/edit?tab=t.0)
 
-## Week 5
+### Week 5
 
 - Implemented PRs:
   - Rename AGENTS.md file ([#51](https://github.com/git-mastery/app/pull/51))
@@ -75,13 +89,13 @@
   - [Publishing application to winget for Windows RFC](https://docs.google.com/document/d/1B81pyVML--aNEurCSobfrS61y_R0jL8rPmKwvkaHrDg/edit?tab=t.0#heading=h.x8t43doyrgeb)
   - Continue work on [E2E App Testing Strategy](https://docs.google.com/document/d/101Qh5SiW-MZGy3DH0lLvn2lqRutxkTKbx01A8dNyI6o/edit?tab=t.0)
 
-## Week 6
+### Week 6
 
 - Implemented PRs:
   - [tooling] Add pre-commit hooks using LeftHook ([#265](https://github.com/git-mastery/exercises/pull/265))
   - Set up base infrastructure for app E2E tests ([#54](https://github.com/git-mastery/app/pull/54))
 
-## Week 7
+### Week 7
 
 - Implemented PRs:
   - Add optimisations to E2E CI workflow ([#57](https://github.com/git-mastery/app/pull/57))
@@ -90,7 +104,7 @@
 - Documentation:
   - Update developer documentation for precommit installation ([#4](https://github.com/git-mastery/developers/pull/4))
 
-## Week 8
+### Week 8
 
 - Reviewed PRs: [#40](https://github.com/git-mastery/app/pull/40)
 - Implemented PRs:
@@ -98,7 +112,7 @@
   - Add winget-publish action in publish.yml ([#61](https://github.com/git-mastery/app/pull/61))
   - Update bump-version.yml to exit with status code 0 if no tag present ([#4](https://github.com/git-mastery/actions/pull/4))
 
-## Week 9
+### Week 9
 
 - Perform release of Git-Mastery App v7.8.0
 - Reviewed PRs: [#84](https://github.com/git-mastery/app/pull/84)
@@ -107,12 +121,21 @@
   - Set up lefthook for app repository ([#76](https://github.com/git-mastery/app/pull/76))
   - Fix winget releaser action ([#80](https://github.com/git-mastery/app/pull/80))
 
-## Week 10
+### Week 10
 
-- Reviewed PRs: [#90](https://github.com/git-mastery/app/pull/90),[#91](https://github.com/git-mastery/app/pull/91)
+- Reviewed PRs: [#90](https://github.com/git-mastery/app/pull/90),[#91](https://github.com/git-mastery/app/pull/91), [#93](https://github.com/git-mastery/app/pull/93), [#86](https://github.com/git-mastery/app/pull/86), [#87](https://github.com/git-mastery/app/pull/87), [#88](https://github.com/git-mastery/app/pull/88), [#89](https://github.com/git-mastery/app/pull/89), [#82](https://github.com/git-mastery/app/pull/82)
 - Implemented PRs:
   - Migrate app to uv and set up dependabot ([#83](https://github.com/git-mastery/app/pull/83))
   - Update set up scripts in exercises repository ([#277](https://github.com/git-mastery/exercises/pull/277))
+
+### Week 11
+
+- Reviewed PRs: [#25](https://github.com/git-mastery/repo-smith/pull/25), [#24](https://github.com/git-mastery/git-autograder/pull/24), [#280](https://github.com/git-mastery/exercises/pull/280), [#281](https://github.com/git-mastery/exercises/pull/281)
+- Implemented PRs:
+  - Migrate exercises to uv ([#279](https://github.com/git-mastery/exercises/pull/279))
+  - Update exercises contirbuting.md and README.md ([#283](https://github.com/git-mastery/exercises/pull/283))
+  - Restructure and update developer documentation ([#6](https://github.com/git-mastery/developers/pull/6))
+  - Update publish pypi library to use uv ([#6](https://github.com/git-mastery/actions/pull/6))
 
 ## Misc
 
