@@ -621,7 +621,8 @@
         "knowledge": "Knowledge",
         "chatgpt-codex-app": "ChatGPT Codex App",
         "claude-code": "Claude Code",
-        "git-hooks": "Git Hooks"
+        "git-hooks": "Git Hooks",
+        "trunk-based-development": "Trunk Based Development"
       },
       "headingKeywords": {}
     },
@@ -629,6 +630,8 @@
       "src": "students/jovnc/progress.md",
       "headings": {
         "git-mastery": "Git-Mastery",
+        "overview": "Overview",
+        "weekly-log": "Weekly Log",
         "week-0": "Week 0",
         "week-1": "Week 1",
         "week-2": "Week 2",
@@ -640,6 +643,7 @@
         "week-8": "Week 8",
         "week-9": "Week 9",
         "week-10": "Week 10",
+        "week-11": "Week 11",
         "misc": "Misc"
       },
       "headingKeywords": {}
@@ -665,6 +669,7 @@
         "chatgpt-codex-app-2": "ChatGPT Codex App",
         "claude-code": "Claude Code",
         "git-hooks": "Git Hooks",
+        "trunk-based-development": "Trunk Based Development",
         "loh-jia-xin": "LOH JIA XIN",
         "github-copilot-2": "GitHub Copilot",
         "claude-code-2": "Claude Code",
