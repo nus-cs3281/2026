@@ -396,7 +396,10 @@
       "src": "students/PhoebeY05/knowledge.md",
       "headings": {
         "github-copilot": "GitHub Copilot",
-        "data-migration": "Data Migration"
+        "data-migration": "Data Migration",
+        "gcp-in-github-actions": "GCP in GitHub Actions",
+        "deployment-credentials": "Deployment Credentials",
+        "authentication": "Authentication"
       },
       "headingKeywords": {}
     },
@@ -759,6 +762,9 @@
         "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
         "github-copilot-5": "GitHub Copilot",
         "data-migration": "Data Migration",
+        "gcp-in-github-actions": "GCP in GitHub Actions",
+        "deployment-credentials": "Deployment Credentials",
+        "authentication": "Authentication",
         "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
         "cursor": "Cursor",
         "agents-md": "agents.md",
