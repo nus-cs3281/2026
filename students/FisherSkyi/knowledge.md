@@ -97,8 +97,6 @@ Resources:
 
 Can make changes to frontend code and see the updates in the browser *without needing to manually refresh the page*.
 
-![alt text](assest/image.png)
-
 ## AI in Development
 
 ### Gemini integration for Java
