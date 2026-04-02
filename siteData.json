@@ -607,7 +607,19 @@
     },
     {
       "src": "students/jiaxinnns/progress.md",
-      "headings": {},
+      "headings": {
+        "git-mastery": "Git-Mastery",
+        "week-1": "Week 1",
+        "week-2": "Week 2",
+        "week-3": "Week 3",
+        "week-4": "Week 4",
+        "week-5": "Week 5",
+        "week-6-7": "Week 6/7",
+        "week-8": "Week 8",
+        "week-9": "Week 9",
+        "week-10": "Week 10",
+        "week-11": "Week 11"
+      },
       "headingKeywords": {}
     },
     {
