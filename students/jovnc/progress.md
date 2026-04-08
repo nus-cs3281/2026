@@ -7,7 +7,9 @@
 - **Pre-commit Tooling**: Proposed and implemented Git hooks via LeftHook across the exercises and app repositories ([#265](https://github.com/git-mastery/exercises/pull/265), [#76](https://github.com/git-mastery/app/pull/76))
 - **Exercise Development**: Implemented and improved verify logic for multiple exercises (mix-messy-graph, mix-messy-docs, remote-branch-rename, branch-forward)
 - **Developer Documentation**: Restructured developer documentation ([#6](https://github.com/git-mastery/developers/pull/6)), wrote onboarding docs, and added `AGENTS.md`
-- **Bug Fixes**: Fixed critical bugs including progress sync failures, help command truncation, Arch Linux release URL, and OneDrive FileNotFound incident
+- **Security & Repo Governance**: Hardened main branch settings, set up CodeQL for static analysis, and added CODEOWNERS ([#116](https://github.com/git-mastery/app/issues/116), [#117](https://github.com/git-mastery/app/pull/117))
+- **Contributor Experience**: Added CONTRIBUTING.md, all-contributors support, and automated contributor tracking in README ([#111](https://github.com/git-mastery/app/pull/111), [#108](https://github.com/git-mastery/app/pull/108))
+- **Bug Fixes**: Fixed critical bugs including progress sync failures, help command truncation, Arch Linux release URL, OneDrive FileNotFound incident, REPL type errors, and E2E test flakiness ([#106](https://github.com/git-mastery/app/pull/106), [#112](https://github.com/git-mastery/app/pull/112))
 - And more! See the weekly log below for a comprehensive list of contributions.
 
 ---
@@ -136,6 +138,18 @@
   - Update exercises contirbuting.md and README.md ([#283](https://github.com/git-mastery/exercises/pull/283))
   - Restructure and update developer documentation ([#6](https://github.com/git-mastery/developers/pull/6))
   - Update publish pypi library to use uv ([#6](https://github.com/git-mastery/actions/pull/6))
+
+### Week 12
+
+- Reviewed PRs: [#4](https://github.com/git-mastery/difflib-parser/pull/4), [#95](https://github.com/git-mastery/app/pull/95), [#97](https://github.com/git-mastery/app/pull/97), [#103](https://github.com/git-mastery/app/pull/103), [#104](https://github.com/git-mastery/app/pull/104), [#2](https://github.com/git-mastery/educator-progress-dashboard/pull/2), [#285](https://github.com/git-mastery/exercises/pull/285)
+- Implemented PRs:
+  - Refactor GH_TOKEN setup in workflows for clarity and maintainability ([#99](https://github.com/git-mastery/app/pull/99))
+  - Fix REPL type errors and handle empty / ([#106](https://github.com/git-mastery/app/pull/106))
+  - Update README.md and add contributors automatically ([#108](https://github.com/git-mastery/app/pull/108))
+  - Add CONTRIBUTING.md and all-contributors support ([#111](https://github.com/git-mastery/app/pull/111))
+  - Retry clone if fail after fork to fix E2E test flakiness ([#112](https://github.com/git-mastery/app/pull/112))
+  - Hardening of main branch settings + set up CodeQL ([#116](https://github.com/git-mastery/app/issues/116))
+  - Add CODEOWNERS ([#117](https://github.com/git-mastery/app/pull/117))
 
 ## Misc
 
