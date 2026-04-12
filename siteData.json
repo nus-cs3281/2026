@@ -727,8 +727,10 @@
     {
       "src": "students/mingyuanc/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "tool-technology": "Tool/Technology",
+        "claude-code-and-amp-copilot": "Claude Code &amp; Copilot",
+        "copilot-code-review": "Copilot Code Review",
+        "soft-skills-and-knowledge": "Soft Skills and Knowledge"
       },
       "headingKeywords": {}
     },
@@ -743,7 +745,9 @@
     },
     {
       "src": "students/mingyuanc/progress.md",
-      "headings": {},
+      "headings": {
+        "lead-and-amp-technical-contributions": "Lead &amp; Technical Contributions"
+      },
       "headingKeywords": {}
     },
     {
