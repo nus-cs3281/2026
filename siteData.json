@@ -654,10 +654,13 @@
         "opencode": "OpenCode",
         "qml": "QML",
         "gabriel-mario-antaputra": "GABRIEL MARIO ANTAPUTRA",
+        "git-internals": "Git Internals",
         "electron": "Electron",
         "react-typescript": "React (Typescript)",
         "tailwind-css": "Tailwind CSS",
         "redux": "Redux",
+        "markbind-2": "Markbind",
+        "github-workflow-and-ci-cd": "Github Workflow and CI/CD",
         "prompt-and-context-engineering": "Prompt and Context Engineering",
         "using-github-copilot-code-review": "Using Github Copilot Code Review",
         "reposense": "RepoSense",
@@ -834,10 +837,13 @@
     {
       "src": "students/thegrimbee/knowledge.md",
       "headings": {
+        "git-internals": "Git Internals",
         "electron": "Electron",
         "react-typescript": "React (Typescript)",
         "tailwind-css": "Tailwind CSS",
         "redux": "Redux",
+        "markbind": "Markbind",
+        "github-workflow-and-ci-cd": "Github Workflow and CI/CD",
         "prompt-and-context-engineering": "Prompt and Context Engineering",
         "using-github-copilot-code-review": "Using Github Copilot Code Review"
       },
@@ -853,7 +859,12 @@
         "week-5": "Week 5",
         "week-6": "Week 6",
         "recess-week": "Recess Week",
-        "week-7": "Week 7"
+        "week-7": "Week 7",
+        "week-8": "Week 8",
+        "week-9": "Week 9",
+        "week-10": "Week 10",
+        "week-11": "Week 11",
+        "week-12": "Week 12"
       },
       "headingKeywords": {}
     },
