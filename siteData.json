@@ -451,7 +451,10 @@
         "github-actions": "GitHub Actions",
         "calling-llms-in-programs": "Calling LLMs in Programs",
         "github-worktrees": "GitHub Worktrees",
-        "java-packages": "Java Packages"
+        "java-packages": "Java Packages",
+        "google-stitch": "Google Stitch",
+        "vue-js-and-pug": "Vue.js and Pug",
+        "writing-cypress-tests-for-vue-js": "Writing Cypress tests for Vue.js"
       },
       "headingKeywords": {}
     },
@@ -682,6 +685,9 @@
         "calling-llms-in-programs": "Calling LLMs in Programs",
         "github-worktrees": "GitHub Worktrees",
         "java-packages": "Java Packages",
+        "google-stitch": "Google Stitch",
+        "vue-js-and-pug": "Vue.js and Pug",
+        "writing-cypress-tests-for-vue-js": "Writing Cypress tests for Vue.js",
         "yu-letian": "YU LETIAN",
         "project-knowledge": "Project Knowledge",
         "vue-js": "Vue.js",
@@ -694,7 +700,7 @@
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
         "tool-technology-1-2": "Tool/Technology 1",
         "tool-technology-2-3": "Tool/Technology 2",
-        "claude-code-3": "Claude Code",
+        "claude-code-4": "Claude Code",
         "tool-technology-3": "Tool/Technology 3",
         "tool-technology-4": "Tool/Technology 4",
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
