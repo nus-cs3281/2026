@@ -438,7 +438,13 @@
     {
       "src": "students/WeeJean/knowledge.md",
       "headings": {
-        "gemini-code-assist": "Gemini Code Assist"
+        "lessons-i-picked-up": "Lessons I Picked Up",
+        "e2e-testing-with-selenium-and-amp-page-object-model": "E2E Testing with Selenium &amp; Page Object Model",
+        "database-migration-datastore-to-sql": "Database Migration (Datastore to SQL)",
+        "gradle-build-system": "Gradle Build System",
+        "tools-i-picked-up": "Tools I Picked Up",
+        "gemini-code-assist": "Gemini Code Assist",
+        "multi-agent-ai-collaboration": "Multi-Agent AI Collaboration"
       },
       "headingKeywords": {}
     },
@@ -718,7 +724,13 @@
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
         "github-copilot-5": "Github Copilot",
         "koh-wee-jean": "KOH WEE JEAN",
+        "lessons-i-picked-up": "Lessons I Picked Up",
+        "e2e-testing-with-selenium-and-amp-page-object-model": "E2E Testing with Selenium &amp; Page Object Model",
+        "database-migration-datastore-to-sql": "Database Migration (Datastore to SQL)",
+        "gradle-build-system": "Gradle Build System",
+        "tools-i-picked-up": "Tools I Picked Up",
         "gemini-code-assist-2": "Gemini Code Assist",
+        "multi-agent-ai-collaboration": "Multi-Agent AI Collaboration",
         "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
         "github-copilot-6": "GitHub Copilot",
         "data-migration": "Data Migration",
