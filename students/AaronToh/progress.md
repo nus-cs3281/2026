@@ -34,3 +34,15 @@
 
 # Week 9
 - Simplified task queueing logic [#13664](https://github.com/TEAMMATES/teammates/pull/13664)
+
+# Week 10
+- Removed intermediate results table on admin page. Some discussion with prof and other maintainers to determine what would be best for user experience [#130619](https://github.com/TEAMMATES/teammates/pull/13619)
+
+# Week 11
+- Upgraded encryption and hashing stack used [#13674](https://github.com/TEAMMATES/teammates/pull/13674)
+
+# Week 12
+- Improved on schema migration workflow [#13748](https://github.com/TEAMMATES/teammates/pull/13748)
+
+# Week 13
+- Completed and merged incomplete PRs.
