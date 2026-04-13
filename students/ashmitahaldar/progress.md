@@ -15,3 +15,15 @@
 | 6 | Continued PR [#2537](https://github.com/reposense/RepoSense/pull/2537) - Debugged failing CI tests|
 | 7 | Implemented feedback and finished PR [#2537](https://github.com/reposense/RepoSense/pull/2537)|
 | 7 | AI exploration: Tried Claude Code skills and plugins|
+| 8 | Started PR [#2557](https://github.com/reposense/RepoSense/pull/2557) addressing issue [#2528](https://github.com/reposense/RepoSense/issues/2528), implementing YAML config wizard |
+| 9 | Continued PR [#2557](https://github.com/reposense/RepoSense/pull/2557): Heavy refactorings, migrating frontend files to Pug, debugging failing tests |
+| 10 | Preparation for teachback next week: Google Stitch |
+| 10 | Continued PR [#2557](https://github.com/reposense/RepoSense/pull/2557): Adding and debugging Cypress tests |
+| 11 | Presented teachback: Using Google Stitch to create vibe-coded UIs |
+| 11 | Finish PR [#2557](https://github.com/reposense/RepoSense/pull/2557) |
+| 11 | Started PR [#2566](https://github.com/reposense/RepoSense/pull/2566) |
+| 12 | Merge PR [#2566](https://github.com/reposense/RepoSense/pull/2566) |
+| 12 | Started PR [#2573](https://github.com/reposense/RepoSense/pull/2573) for opened issue [#2572](https://github.com/reposense/RepoSense/issues/2572) |
+| 12 | Reviewed PR [#2556](https://github.com/reposense/RepoSense/pull/2556) |
+| 13 | Merge PR [#2557](https://github.com/reposense/RepoSense/pull/2557) |
+| 13 | Merge PR [#2573](https://github.com/reposense/RepoSense/pull/2573) |
