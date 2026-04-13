@@ -162,3 +162,4 @@
 - [Vibe Coding an App](https://docs.google.com/document/d/1lkt77dtJwEmgs9pRUB1wTd2rj8HiE-I5RNihyPNzDCc/edit?tab=t.0#heading=h.56d739jgyert)
 - [Test Drive adding AI to iP](https://github.com/se-edu/guides/issues/190)
 - [CSV Text Classifier](https://drive.google.com/drive/u/3/folders/14MJf8G1SOAYBnTzU7Z575gZ0tPuHiEGI)
+- [Test-drive the tutorial on using a local LLM in a Java project](https://github.com/se-edu/guides/issues/195)
