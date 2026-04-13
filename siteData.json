@@ -121,14 +121,24 @@
     {
       "src": "students/BladerX11/knowledge.md",
       "headings": {
-        "opencode": "OpenCode",
-        "qml": "QML"
+        "ai-coding": "AI Coding",
+        "qml": "QML",
+        "electron": "Electron"
       },
       "headingKeywords": {}
     },
     {
       "src": "students/BladerX11/progress.md",
-      "headings": {},
+      "headings": {
+        "week-1": "Week 1",
+        "week-2": "Week 2",
+        "week-3": "Week 3",
+        "week-4": "Week 4",
+        "week-5-and-amp-6": "Week 5 &amp; 6",
+        "week-7": "Week 7",
+        "week-8": "Week 8",
+        "week-9-and-amp-10-and-amp-11": "Week 9 &amp; 10 &amp; 11"
+      },
       "headingKeywords": {}
     },
     {
@@ -661,11 +671,12 @@
         "outstanding-issues": "Outstanding issues",
         "open": "Open",
         "dallas-lim-juin-loon": "DALLAS LIM JUIN LOON",
-        "opencode": "OpenCode",
+        "ai-coding": "AI Coding",
         "qml": "QML",
+        "electron": "Electron",
         "gabriel-mario-antaputra": "GABRIEL MARIO ANTAPUTRA",
         "git-internals": "Git Internals",
-        "electron": "Electron",
+        "electron-2": "Electron",
         "react-typescript": "React (Typescript)",
         "tailwind-css": "Tailwind CSS",
         "redux": "Redux",
@@ -706,7 +717,7 @@
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
         "github-copilot-5": "Github Copilot",
         "koh-wee-jean": "KOH WEE JEAN",
-        "gemini-code-assist": "Gemini Code Assist",
+        "gemini-code-assist-2": "Gemini Code Assist",
         "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
         "github-copilot-6": "GitHub Copilot",
         "data-migration": "Data Migration",
