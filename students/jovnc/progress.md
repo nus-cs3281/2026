@@ -153,9 +153,13 @@
 
 ### Week 13
 
-- Reviewed PRs: [#34](https://github.com/git-mastery/git-autograder/pull/34), [#125](https://github.com/git-mastery/app/pull/125), [#123](https://github.com/git-mastery/app/pull/123), [#124](https://github.com/git-mastery/app/pull/124), [#122](https://github.com/git-mastery/app/pull/122), [#121](https://github.com/git-mastery/app/pull/121), [#284](https://github.com/git-mastery/exercises/pull/284), [#75](https://github.com/git-mastery/app/pull/75), [#5](https://github.com/git-mastery/actions/pull/5), [#85](https://github.com/git-mastery/app/pull/85)
+- Reviewed PRs: [#34](https://github.com/git-mastery/git-autograder/pull/34), [#125](https://github.com/git-mastery/app/pull/125), [#123](https://github.com/git-mastery/app/pull/123), [#124](https://github.com/git-mastery/app/pull/124), [#122](https://github.com/git-mastery/app/pull/122), [#121](https://github.com/git-mastery/app/pull/121), [#284](https://github.com/git-mastery/exercises/pull/284), [#75](https://github.com/git-mastery/app/pull/75), [#5](https://github.com/git-mastery/actions/pull/5), [#85](https://github.com/git-mastery/app/pull/85), [#26](https://github.com/git-mastery/repo-smith/pull/26), [#27](https://github.com/git-mastery/repo-smith/pull/27)
 - Implemented PRs:
   - Add first contributor comment action in all repositories ([#7](https://github.com/git-mastery/actions/pull/7), [#126](https://github.com/git-mastery/app/pull/126), [#289](https://github.com/git-mastery/exercises/pull/289), [#6](https://github.com/git-mastery/difflib-parser/pull/6), [#33](https://github.com/git-mastery/git-autograder/pull/33))
+  - Fix publish error in PyPI ([#8](https://github.com/git-mastery/actions/pull/8), [#9](https://github.com/git-mastery/actions/pull/9))
+  - Publish latest git-autograder and reposmith dependencies ([#35](https://github.com/git-mastery/git-autograder/pull/35), [#36](https://github.com/git-mastery/git-autograder/pull/36), [#127](https://github.com/git-mastery/app/pull/127), [#290](https://github.com/git-mastery/exercises/pull/290))
+- Issues created:
+  - [#29](https://github.com/git-mastery/repo-smith/issues/29), [#30](https://github.com/git-mastery/repo-smith/issues/30)
 
 ## Misc
 
