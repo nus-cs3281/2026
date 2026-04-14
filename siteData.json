@@ -348,7 +348,11 @@
         "data-migration": "Data Migration",
         "gcp-in-github-actions": "GCP in GitHub Actions",
         "deployment-credentials": "Deployment Credentials",
-        "authentication": "Authentication"
+        "authentication": "Authentication",
+        "full-text-search": "Full-Text Search",
+        "search-infrastructure": "Search Infrastructure",
+        "query-and-performance": "Query and Performance",
+        "security-and-configuration": "Security and Configuration"
       },
       "headingKeywords": {}
     },
@@ -737,6 +741,10 @@
         "gcp-in-github-actions": "GCP in GitHub Actions",
         "deployment-credentials": "Deployment Credentials",
         "authentication": "Authentication",
+        "full-text-search": "Full-Text Search",
+        "search-infrastructure": "Search Infrastructure",
+        "query-and-performance": "Query and Performance",
+        "security-and-configuration": "Security and Configuration",
         "saripalli-bhagat-sai-reddy": "SARIPALLI BHAGAT SAI REDDY",
         "cursor": "Cursor",
         "agents-md": "agents.md",
