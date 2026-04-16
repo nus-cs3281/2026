@@ -509,7 +509,11 @@
         "git-worktree": "Git Worktree",
         "github-copilot": "Github Copilot",
         "chatgpt-codex-app": "ChatGPT Codex App",
-        "github-actions": "GitHub Actions"
+        "github-actions": "GitHub Actions",
+        "git-hooks-and-lefthook": "Git Hooks and Lefthook",
+        "uv": "UV",
+        "gitflow-and-trunk-based-development": "GitFlow and Trunk-Based Development",
+        "semantic-versioned-releases": "Semantic Versioned Releases"
       },
       "headingKeywords": {}
     },
@@ -654,6 +658,10 @@
         "github-copilot": "Github Copilot",
         "chatgpt-codex-app": "ChatGPT Codex App",
         "github-actions": "GitHub Actions",
+        "git-hooks-and-lefthook": "Git Hooks and Lefthook",
+        "uv": "UV",
+        "gitflow-and-trunk-based-development": "GitFlow and Trunk-Based Development",
+        "semantic-versioned-releases": "Semantic Versioned Releases",
         "goyal-vikram": "GOYAL VIKRAM",
         "tool-technology-1": "Tool/Technology 1",
         "tool-technology-2": "Tool/Technology 2",
