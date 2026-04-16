@@ -132,7 +132,7 @@
 * After configuring the managers, you can create a HTTP Request to an endpoint and use assertions to test the response (e.g. Response Code is 200).
 * Running the load testing in CLI is more efficient because it doesn’t have the overhead of rendering the process and results in the GUI, consuming memory and CPU resources. [Source for CLI](https://jmeter.apache.org/usermanual/get-started.html#non_gui)
 * JMeter CLI can generate detailed visualised reports covering response times, throughput, request statistics, request errors etc.
-  * Flags for report generation (-e to generate report, -o <empty folder path> to indicate report output folder).
+  * Flags for report generation (`-e` to generate report, `-o <empty folder path>` to indicate report output folder).
 
 ### Snyk
 * Snyk is a tool used to monitor/detect security vulnerabilities in package dependencies. Synk CLI can be installed globally (`-g`) and used to test the project locally.
