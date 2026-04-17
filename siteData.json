@@ -722,6 +722,8 @@
         "chen-yizhong": "CHEN YIZHONG",
         "tool-technology-1-github-copilot": "Tool/Technology 1: GitHub Copilot",
         "tool-technology-2-claude-code": "Tool/Technology 2: Claude Code",
+        "tool-technology-3-renovate-bot": "Tool/Technology 3: renovate Bot",
+        "tool-technology-4-model-context-protocol-mcp": "Tool/Technology 4: Model Context Protocol (MCP)",
         "haldar-ashmita": "HALDAR ASHMITA",
         "ai-coding-tools-2": "AI Coding Tools",
         "terminal-uis": "Terminal UIs",
@@ -1009,7 +1011,9 @@
       "src": "students/yizhong187/knowledge.md",
       "headings": {
         "tool-technology-1-github-copilot": "Tool/Technology 1: GitHub Copilot",
-        "tool-technology-2-claude-code": "Tool/Technology 2: Claude Code"
+        "tool-technology-2-claude-code": "Tool/Technology 2: Claude Code",
+        "tool-technology-3-renovate-bot": "Tool/Technology 3: renovate Bot",
+        "tool-technology-4-model-context-protocol-mcp": "Tool/Technology 4: Model Context Protocol (MCP)"
       },
       "headingKeywords": {}
     },
