@@ -531,6 +531,8 @@
       "src": "students/gerteck/knowledge.md",
       "headings": {
         "tool-technology": "Tool/Technology",
+        "developer-tools-and-amp-workflow": "Developer Tools &amp; Workflow",
+        "ai-assisted-development-and-amp-architecture": "AI-Assisted Development &amp; Architecture",
         "claude-code-and-amp-ai-agents": "Claude Code &amp; AI Agents",
         "copilot-code-review": "Copilot Code Review",
         "soft-skills-and-knowledge": "Soft Skills and Knowledge"
