@@ -21,3 +21,6 @@ Create CLI for xml manipulations and setup packaging for it.
 
 ### Week 9 & 10 & 11
 Refactored front end of electron code, updating dependencies and improving tooling.
+
+### Week 12 & 13
+Refactored backend code, fix xml backend to remove all audio added by app, and only audio added by app.
