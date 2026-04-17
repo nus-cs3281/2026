@@ -24,6 +24,12 @@ Resources:
 - Claude Code documentation: https://docs.anthropic.com/en/docs/claude-code
 
 
-### Tool/Technology 2
+### Devin AI
 
-...
+Devin AI is an autonomous AI software engineer by Cognition that can browse the web, write code, and perform multi-step engineering tasks with minimal human intervention.
+
+Learning points:
+- Use Devin for code reviews by pointing it to a specific PR and asking targeted questions, as it can read diffs and provide contextual feedback. It is able to track logic across different files and flag bugs and inconsistencies which involve multiple files, which other AI review agents were unable to flag.
+
+Resources:
+- Devin documentation: https://docs.devin.ai

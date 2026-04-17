@@ -66,3 +66,12 @@
   - Migrate to UV ([#4](https://github.com/git-mastery/difflib-parser/pull/4), [#24](https://github.com/git-mastery/git-autograder/pull/24), [#25](https://github.com/git-mastery/repo-smith/pull/25))
   - Revamp developer docs ([developers](https://github.com/git-mastery/developers/tree/chore/update-developer-docs))
   - Move metadata into .gitmastery folder (based on new suggestions) ([#105](https://github.com/git-mastery/app/pull/105))
+
+## Week 12
+
+- Implemented PRs:
+  - Migrate mypy.ini to pyproject.toml ([#119](https://github.com/git-mastery/app/pull/119))
+
+## Week 13
+
+- Reviewed PRs: [#85](https://github.com/git-mastery/app/pull/85)
