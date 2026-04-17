@@ -56,3 +56,9 @@
 ## Week 12
 - Fix Bugs: Fix Filter Objects Count to be Dependent on Branch ([Web](https://github.com/git-visor/web-app/pull/53), [Electron](https://github.com/git-visor/desktop-app/pull/42)), Fix Commit Sort Order to be Based on Parents Instead of Commit Time ([Web](https://github.com/git-visor/web-app/pull/56), [Electron](https://github.com/git-visor/desktop-app/pull/44)), [Fix Load Url Timing Issue] (https://github.com/git-visor/web-app/pull/55)
 - Release [v1.0.1](https://github.com/git-visor/desktop-app/releases/tag/v1.0.1)
+
+## Week 13
+- Update UI: Improve Layout ([Web](https://github.com/git-visor/web-app/pull/64), [Electron](https://github.com/git-visor/desktop-app/pull/50))
+- Fix Bugs: [Fix Refresh Bug](https://github.com/git-visor/desktop-app/pull/51), [Fix Unable to Select Repo When Loading From Url](https://github.com/git-visor/web-app/pull/65)
+- Added features: [Add File Adding Example](https://github.com/git-visor/web-app/pull/60)
+- [Add Tests](https://github.com/git-visor/desktop-app/pull/52)
