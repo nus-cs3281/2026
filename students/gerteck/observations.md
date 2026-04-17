@@ -1,4 +1,4 @@
-### Project: All-Contributors App
+## Project: All-Contributors App
 > Give an intro to the project here ...
 
 The [All-Contributors App](https://github.com/all-contributors/app) is a GitHub bot that automates the recognition of open-source contributors. It streamlines the "All Contributors" specification by allowing maintainers to add contributors via comment commands, ensuring all types of work (code, docs, etc.) are acknowledged.
@@ -13,7 +13,7 @@ I resolved integration failures that had stalled the project's development pipel
 * **Synchronized Test Suites:** Updated outdated test snapshots and recalibrated the suite to pass on Node v22 (LTS).
 * **Relevant PR:** [bug(test): Fix short circuit bug, testcase snapshots and deprecated codecov action #544](https://github.com/all-contributors/app/pull/544)
 
-### Project: Mihon
+## Project: Mihon
 
 [Mihon](https://github.com/mihonapp/mihon) is a free and open-source manga reader for Android. It features a highly customizable reader interface, including an "Automatic Background" feature that attempts to match the viewer's background color to the edges of the current page for a seamless visual experience.
 
