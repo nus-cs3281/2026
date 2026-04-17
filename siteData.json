@@ -585,7 +585,7 @@
       "headings": {
         "github-copilot": "GitHub Copilot",
         "claude-code": "Claude Code",
-        "tool-technology-2": "Tool/Technology 2"
+        "devin-ai": "Devin AI"
       },
       "headingKeywords": {}
     },
@@ -602,7 +602,9 @@
         "week-8": "Week 8",
         "week-9": "Week 9",
         "week-10": "Week 10",
-        "week-11": "Week 11"
+        "week-11": "Week 11",
+        "week-12": "Week 12",
+        "week-13": "Week 13"
       },
       "headingKeywords": {}
     },
@@ -677,7 +679,7 @@
         "loh-jia-xin": "LOH JIA XIN",
         "github-copilot-2": "GitHub Copilot",
         "claude-code-2": "Claude Code",
-        "tool-technology-2-2": "Tool/Technology 2",
+        "devin-ai": "Devin AI",
         "san-muyun": "SAN MUYUN",
         "contextmanager": "ContextManager",
         "utilising-codex-for-coding": "Utilising Codex for coding",
@@ -746,7 +748,7 @@
         "teammates": "TEAMMATES",
         "aaron-toh-yingwei": "AARON TOH YINGWEI",
         "tool-technology-1-2": "Tool/Technology 1",
-        "tool-technology-2-3": "Tool/Technology 2",
+        "tool-technology-2-2": "Tool/Technology 2",
         "claude-code-4": "Claude Code",
         "tool-technology-3": "Tool/Technology 3",
         "tool-technology-4": "Tool/Technology 4",
