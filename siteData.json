@@ -308,7 +308,13 @@
       "src": "students/NorbertLoh/knowledge.md",
       "headings": {
         "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "tool-technology-2": "Tool/Technology 2",
+        "tool-technology-3": "Tool/Technology 3",
+        "tool-technology-4": "Tool/Technology 4",
+        "tool-technology-5": "Tool/Technology 5",
+        "tool-technology-6": "Tool/Technology 6",
+        "tool-technology-7": "Tool/Technology 7",
+        "knowledge": "Knowledge"
       },
       "headingKeywords": {}
     },
@@ -323,7 +329,9 @@
     },
     {
       "src": "students/NorbertLoh/progress.md",
-      "headings": {},
+      "headings": {
+        "summary": "Summary"
+      },
       "headingKeywords": {}
     },
     {
