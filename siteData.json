@@ -279,7 +279,14 @@
       "src": "students/MoshiMoshiMochi/knowledge.md",
       "headings": {
         "github-copilot": "GitHub Copilot",
-        "agent-skills": "Agent Skills"
+        "agent-skills": "Agent Skills",
+        "cjs-to-esm-migration": "CJS to ESM migration",
+        "full-textual-search-with-pagefind": "Full Textual Search with Pagefind",
+        "server-driven-ui-sdui": "Server Driven UI (SDUI)",
+        "get-shit-done-gsd": "Get Shit Done (GSD)",
+        "build-more-architect-dreams-bmad": "Build More Architect Dreams (BMAD)",
+        "superpowers": "Superpowers",
+        "plan-apply-unify-loop-paul": "Plan-Apply-Unify Loop (PAUL)"
       },
       "headingKeywords": {}
     },
@@ -693,6 +700,13 @@
         "chua-jia-chen-thaddaeus": "CHUA JIA CHEN THADDAEUS",
         "github-copilot-3": "GitHub Copilot",
         "agent-skills": "Agent Skills",
+        "cjs-to-esm-migration": "CJS to ESM migration",
+        "full-textual-search-with-pagefind": "Full Textual Search with Pagefind",
+        "server-driven-ui-sdui": "Server Driven UI (SDUI)",
+        "get-shit-done-gsd": "Get Shit Done (GSD)",
+        "build-more-architect-dreams-bmad": "Build More Architect Dreams (BMAD)",
+        "superpowers": "Superpowers",
+        "plan-apply-unify-loop-paul": "Plan-Apply-Unify Loop (PAUL)",
         "harvinder-arjun-singh-s-o-sukhwant-singh": "HARVINDER ARJUN SINGH S/O SUKHWANT SINGH",
         "ai-assisted-coding-tools": "AI-Assisted Coding Tools",
         "typescript-and-the-javascript-node-ecosystem": "TypeScript (and the JavaScript/Node ecosystem)",
