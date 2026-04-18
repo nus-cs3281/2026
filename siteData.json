@@ -225,7 +225,11 @@
       "src": "students/HollaG/knowledge.md",
       "headings": {
         "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "developer-tools": "Developer tools",
+        "agentic-programming": "Agentic programming",
+        "ai-design": "AI Design",
+        "vibe-coding": "Vibe Coding",
+        "electron": "Electron"
       },
       "headingKeywords": {}
     },
