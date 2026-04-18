@@ -328,7 +328,12 @@
         "openai-api": "OpenAI API",
         "prompt-engineering-for-software-engineering-tasks": "Prompt Engineering for Software Engineering Tasks",
         "ai-assisted-debugging-and-refactoring": "AI-Assisted Debugging and Refactoring",
-        "rapid-prototyping-of-ai-features": "Rapid Prototyping of AI Features"
+        "rapid-prototyping-of-ai-features": "Rapid Prototyping of AI Features",
+        "rag-pipeline-design": "RAG Pipeline Design",
+        "oauth-oidc-integration": "OAuth / OIDC Integration",
+        "schema-evolution-and-data-migration": "Schema Evolution and Data Migration",
+        "build-and-ci-tooling": "Build and CI Tooling",
+        "resilient-testing-and-environment-independent-design": "Resilient Testing and Environment-Independent Design"
       },
       "headingKeywords": {}
     },
@@ -780,6 +785,11 @@
         "prompt-engineering-for-software-engineering-tasks": "Prompt Engineering for Software Engineering Tasks",
         "ai-assisted-debugging-and-refactoring": "AI-Assisted Debugging and Refactoring",
         "rapid-prototyping-of-ai-features": "Rapid Prototyping of AI Features",
+        "rag-pipeline-design": "RAG Pipeline Design",
+        "oauth-oidc-integration": "OAuth / OIDC Integration",
+        "schema-evolution-and-data-migration": "Schema Evolution and Data Migration",
+        "build-and-ci-tooling": "Build and CI Tooling",
+        "resilient-testing-and-environment-independent-design": "Resilient Testing and Environment-Independent Design",
         "yong-jun-xi": "YONG JUN XI",
         "general-knowledge": "General Knowledge",
         "oauth-open-authorization": "OAuth (Open Authorization)",
