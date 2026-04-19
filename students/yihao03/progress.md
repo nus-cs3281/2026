@@ -2,18 +2,59 @@
 
 ## PRs Created
 
-| ID     | TITLE                                              | BRANCH |
+| ID     | TITLE                                              | STATE |
 |--- |--- |--- |
-| #2834  | Migrate packages/vue-components Utils files to TS  | yihao03:feat/migrate-vue-utils-to-ts |
-| #2828  | Add Card Counts to Tag                             | yihao03:feat/add-tag-count |
-| #2824  | Add setup to pretest script                        | yihao03:chore/update-test-script |
-| #2809  | Implement custom cardstack tag colors and order    | yihao03:feat/cardstack-tag-order-colors-implementation   |
-| #2805  | Migrate vue-components package to TS               | yihao03:feat/migrate-vue-components-to-ts |
-| #2804  | Add agent skills for AI coding                     | yihao03:feat/experiment-with-skills |
-| #2794  | feat/specify cardstack tags order and colour       | yihao03:feat/specify-cardstack-tags-order-and-colour |
-| #2788  | Update architecture diagram to use mermaid         | yihao03:chore/user-mermaid |
+| #2893  | Add commands to pull AI Skills                     | MERGED |
+| #2891  | Add Command to pull user-facing skills            | MERGED |
+| #2889  | User facing AI Skills                             | CLOSED |
+| #2856  | Add Dark Mode Support                             | MERGED |
+| #2853  | Migrate Core Patches to TypeScript                | MERGED |
+| #2852  | Update markbind deploy success log message        | MERGED |
+| #2834  | Migrate packages/vue-components Utils files to TS  | MERGED |
+| #2828  | Add Card Counts to Tag                             | MERGED |
+| #2824  | Add setup to pretest script                        | OPEN |
+| #2809  | Implement custom cardstack tag colors and order    | MERGED |
+| #2805  | Migrate vue-components package to TS               | CLOSED |
+| #2804  | Add agent skills for AI coding                     | MERGED |
+| #2794  | feat_specify cardstack tags order and colour       | CLOSED |
+| #2788  | Update architecture diagram to use mermaid       | MERGED |
 
 ## PR Details
+
+### #2893  Add commands to pull AI Skills
+
+- Added new command family `markbind skills` that manages AI skills created in
+the new [skills](https://github.com/markbind/skills) repository.
+- Implemented version control for skills using `.markbind-skills.json` to track skill versions.
+- Added new package `@inquirer/prompts` for interactive prompts, laying the
+foundation for future interactive repo setup commands.
+
+### #2889  User facing AI Skills
+
+- Preview of user-facing AI skills for MarkBind users.
+- Allow users to use AI coding tools to manage their MarkBind sites more
+efficiently.
+- Skills meant to live on a separate repository.
+
+### #2856  Add Dark Mode Support
+
+- Upgraded Bootstrap to 5.3 for dark theme support.
+- Added dark mode flag in `site.json` that respects system preference by default.
+- Added toggle button in navbar to switch between light and dark mode.
+- Added runtime page theme switching.
+- Refactored hardcoded color values to use bootstrap CSS variables
+
+### #2853  Migrate Core Patches to TypeScript
+
+- Migrated `nunjucks`, `htmlparser2` and `markdown-it` patches to TypeScript and ESM.
+- Used module augmentation to add types for patched packages.
+- A lot of monkey patching
+
+### #2852  Update markbind deploy success log message
+
+- Initially, deploy command always showed a success message regardless of the
+actual deployment result.
+- Updated deploy log message to instead include both GitHub Actions URL deploying the site and the deployed site URL.
 
 ### #2834  Migrate packages/vue-components Utils files to TS
 
@@ -28,12 +69,29 @@
 
 ### #2824  Add setup to pretest script
 
-I noticed that sometimes when tests rely on built files, after pulling from remote, the built files might be outdated and cause test failures. To solve this, I added a setup step to the pretest script to ensure that the necessary build steps are executed before running the tests.
-
-However, it increases the time to run the tests, so I'm not sure if its the best solution. It has not been merged yet.
+- Adds a pre-test cleanup step to delete stale artifacts before running tests.
+- Addresses issue where tests pass locally but fail in CI due to stale built files.
+- Currently still open, pending review.
 
 ### #2809  Implement custom cardstack tag colors and order
 
 - Implemented the feature to specify custom tag colors and order in the `cardstack` component.
 - The tag colors and order are specified as props.
 - Supports bootstrap color classes and custom hex codes for colors.
+
+### #2805  Migrate vue-components package to TS
+
+- Migrated the `packages/vue-components` JavaScript files to TypeScript.
+- Part of the effort to migrate the entire codebase to TypeScript and ES6.
+- Done primarily using OpenCode with Claude Sonnet 4.5 to experiment with AI coding.
+
+### #2804  Add agent skills for AI coding
+
+- Added agent skills for AI coding tools (OpenCode/ClaudeCode).
+- Used the open source SKILL.md standard which is provider agnostic.
+- Created skills by reading the devGuide and generating relevant skill files.
+
+### #2788  Update architecture diagram to use mermaid
+
+- Replaced `architecture.pptx` and `architecture.png` with mermaid diagram in `architecture.md`.
+- Diagram rendered correctly when serving the markbind site.
