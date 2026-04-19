@@ -3,4 +3,4 @@
 <span id="github">https://www.github.com/thegrimbee</span>
 
 <!-- [CS3281: Give your NUS-OSS project][CS3282: give your internal and external projects related to the module] -->
-<span id="projects">[git-visualiser]()</span>
+<span id="projects">[git-visualiser](https://github.com/thegrimbee/git-visualiser), [git-visualiser-web](https://github.com/thegrimbee/git-visualiser-web)</span>
