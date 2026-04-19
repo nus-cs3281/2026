@@ -591,7 +591,12 @@
     {
       "src": "students/iZUMi-kyouka/knowledge.md",
       "headings": {
-        "github-copilot": "Github Copilot"
+        "github-copilot-and-agentic-coding-in-general": "GitHub Copilot (and agentic coding in general)",
+        "google-cloud-platform-gcp": "Google Cloud Platform (GCP)",
+        "openid-connect-authentication": "OpenID Connect Authentication",
+        "github-actions": "GitHub Actions",
+        "json-handling-in-java": "JSON Handling in Java",
+        "unit-testing": "Unit Testing"
       },
       "headingKeywords": {}
     },
@@ -785,7 +790,12 @@
         "tool-technology-3": "Tool/Technology 3",
         "tool-technology-4": "Tool/Technology 4",
         "florian-viorel-tanely": "FLORIAN VIOREL TANELY",
-        "github-copilot-5": "Github Copilot",
+        "github-copilot-and-agentic-coding-in-general": "GitHub Copilot (and agentic coding in general)",
+        "google-cloud-platform-gcp": "Google Cloud Platform (GCP)",
+        "openid-connect-authentication": "OpenID Connect Authentication",
+        "github-actions-3": "GitHub Actions",
+        "json-handling-in-java": "JSON Handling in Java",
+        "unit-testing": "Unit Testing",
         "koh-wee-jean": "KOH WEE JEAN",
         "lessons-i-picked-up": "Lessons I Picked Up",
         "e2e-testing-with-selenium-and-amp-page-object-model": "E2E Testing with Selenium &amp; Page Object Model",
@@ -795,7 +805,7 @@
         "gemini-code-assist-2": "Gemini Code Assist",
         "multi-agent-ai-collaboration": "Multi-Agent AI Collaboration",
         "phoebe-yap-xin-hui": "PHOEBE YAP XIN HUI",
-        "github-copilot-6": "GitHub Copilot",
+        "github-copilot-5": "GitHub Copilot",
         "data-migration": "Data Migration",
         "gcp-in-github-actions": "GCP in GitHub Actions",
         "deployment-credentials": "Deployment Credentials",
@@ -832,7 +842,7 @@
         "3nf-third-normal-form": "3NF (Third Normal Form)",
         "tips": "Tips",
         "tools": "Tools",
-        "github-copilot-7": "Github Copilot",
+        "github-copilot-6": "Github Copilot",
         "vscode": "VSCode",
         "git": "Git",
         "testng": "TestNG",
