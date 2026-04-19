@@ -1035,10 +1035,18 @@
         "overview": "Overview",
         "prs-created": "PRs Created",
         "pr-details": "PR Details",
+        "2893-add-commands-to-pull-ai-skills": "#2893  Add commands to pull AI Skills",
+        "2889-user-facing-ai-skills": "#2889  User facing AI Skills",
+        "2856-add-dark-mode-support": "#2856  Add Dark Mode Support",
+        "2853-migrate-core-patches-to-typescript": "#2853  Migrate Core Patches to TypeScript",
+        "2852-update-markbind-deploy-success-log-message": "#2852  Update markbind deploy success log message",
         "2834-migrate-packages-vue-components-utils-files-to-ts": "#2834  Migrate packages/vue-components Utils files to TS",
         "2828-add-card-counts-to-tag": "#2828  Add Card Counts to Tag",
         "2824-add-setup-to-pretest-script": "#2824  Add setup to pretest script",
-        "2809-implement-custom-cardstack-tag-colors-and-order": "#2809  Implement custom cardstack tag colors and order"
+        "2809-implement-custom-cardstack-tag-colors-and-order": "#2809  Implement custom cardstack tag colors and order",
+        "2805-migrate-vue-components-package-to-ts": "#2805  Migrate vue-components package to TS",
+        "2804-add-agent-skills-for-ai-coding": "#2804  Add agent skills for AI coding",
+        "2788-update-architecture-diagram-to-use-mermaid": "#2788  Update architecture diagram to use mermaid"
       },
       "headingKeywords": {}
     },
