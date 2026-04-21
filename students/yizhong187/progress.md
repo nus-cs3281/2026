@@ -1,14 +1,15 @@
 | Week | Achievements |
 | ---- | ------------ |
-| 1 | Set up development environment and understood codebase |
-| 2 | Authored PR: [Add repository-level GitHub Copilot instructions](https://github.com/reposense/RepoSense/pull/2515) for issue [#2513](https://github.com/reposense/RepoSense/issues/2513)|
-| 3 | Authored PR: [Remove asset flag from ug](https://github.com/reposense/RepoSense/pull/2525) for issue [User Guide still including --assets despite deprecation](https://github.com/reposense/RepoSense/issues/2507) and issue [Reorganise Customizing Report Page in UG](https://github.com/reposense/RepoSense/issues/2529)|
-| 3 | Submitted issue: [Flag to allow for deduplicating authors with authors-config.csv](https://github.com/reposense/RepoSense/issues/2524)|
-| 3 | PR merged: [Add repository-level GitHub Copilot instructions](https://github.com/reposense/RepoSense/pull/2515)|
-| 4 | PR merged: [Remove asset flag from ug](https://github.com/reposense/RepoSense/pull/2525)|
-| 4 | Investigated issue: [RepoSense deleted my ~/repos folder](https://github.com/reposense/RepoSense/issues/2533)|
-| 4 | Authored PR: [Add new --author-dedup-mode flag for deduplicating authors](https://github.com/reposense/RepoSense/pull/2532)|
-| 5 | Investigate repo-wide Java Linting
-| 6 | Update PR based on comments and add additional tests for [Add new --author-dedup-mode flag for deduplicating authors](https://github.com/reposense/RepoSense/pull/2532)|
-| 7 | AI exploration: Claude Code subagents workflow|
-| 7 | AI exploration: Claude Code use on CS2103 IP |
+| 1 | <ul><li>Set up development environment and understood codebase</li><li>Studied the system architecture and the rationale for migrating from Datastore to SQL</li></ul> |
+| 2 | <ul><li>Authored PR: [Add repository-level GitHub Copilot instructions](https://github.com/reposense/RepoSense/pull/2515) for issue [#2513](https://github.com/reposense/RepoSense/issues/2513)</li></ul> |
+| 3 | <ul><li>Authored PR: [Remove asset flag from ug](https://github.com/reposense/RepoSense/pull/2525) for issue [User Guide still including --assets despite deprecation](https://github.com/reposense/RepoSense/issues/2507) and issue [Reorganise Customizing Report Page in UG](https://github.com/reposense/RepoSense/issues/2529)</li><li>Submitted issue: [Flag to allow for deduplicating authors with authors-config.csv](https://github.com/reposense/RepoSense/issues/2524)</li><li>PR merged: [Add repository-level GitHub Copilot instructions](https://github.com/reposense/RepoSense/pull/2515)</li></ul> |
+| 4 | <ul><li>PR merged: [Remove asset flag from ug](https://github.com/reposense/RepoSense/pull/2525)</li><li>Investigated issue: [RepoSense deleted my ~/repos folder](https://github.com/reposense/RepoSense/issues/2533)</li><li>Authored PR: [Add new --author-dedup-mode flag for deduplicating authors](https://github.com/reposense/RepoSense/pull/2532)</li></ul> |
+| 5 | <ul><li>Housekeeping: Investigate repo-wide Java Linting</li></ul> |
+| 6 | <ul><li>Update PR based on comments and add additional tests for [Add new --author-dedup-mode flag for deduplicating authors](https://github.com/reposense/RepoSense/pull/2532)</li></ul> |
+| 7 | <ul><li>AI exploration: Claude Code subagents workflow (Experimented and presented on _parital porting_ of RepoSense into Typescript for possible web based engine)</li><li>AI exploration: Claude Code use on CS2103 IP</li></ul> |
+| 8 | <ul><li>CS2103 tasking: Explore approaches for local LLM based CS2103 IP</li></ul> |
+| 9 | <ul><li>CS2103 tasking: Started work on SE-EDU guide on integration of local LLM into  Java App</li></ul> |
+| 10 | <ul><li>Teachback: Agentic Claude Code Workflow (demonstrated with LLM based CS2103 IP)</li><li>Authored PR: [Add tutorial into SE-EDU guides for local LLM integration into Java App](https://github.com/se-edu/guides/pull/192)</li></ul> |
+| 11 | <ul><li>Authored PR: [Update SE-EDU local LLM integration guide with breadth-first approach](https://github.com/se-edu/guides/pull/193)</li><li>Authored PR: [Update SE-EDU local LLM integration guide with improved explanations](https://github.com/se-edu/guides/pull/194)</li><li>CS2103 tasking: Started work on proposal for new AI track in CS2103 IP</li><li>CS2103 tasking: Explore usage of Github Copilot in Intellij for AI track in CS2103 IP</li></ul> |
+| 12 | <ul><li>CS2103 tasking: Completed and presented proposed new [AI track in CS2103 IP](https://github.com/yizhong187/cs2103-proposed-ai-track)</li><li>Learning: Look into and understand how `renovate` automated dependency update tool works</li></ul> |
+| 13 | <ul><li>Housekeeping: [Update `renovate` configuration in repo to support group based depencency update safely.](https://github.com/reposense/RepoSense/pull/2576)</li><li>Housekeeping: [Fix `renovate`'s automated PR to enable updating of 23 minor dependency updates.](https://github.com/reposense/RepoSense/pull/2583)</li><li>Release: Assisted in release with merge strategy planning and review</li></ul> |

@@ -30,3 +30,35 @@
 
 ## Week 7
 - Added features: Commit Diff ([Web](https://github.com/thegrimbee/git-visualiser-web/pull/22), [Electron](https://github.com/thegrimbee/git-visualiser/pull/21/)), [Export JSON](https://github.com/thegrimbee/git-visualiser/pull/22/), [Custom JSON URL](https://github.com/thegrimbee/git-visualiser-web/pull/27)
+
+## Week 8
+- Added features: [Custom Url Handling](https://github.com/git-visor/web-app/pull/27), [Export JSON](https://github.com/git-visor/desktop-app/pull/22)
+
+## Week 9
+- Update UI: Change Tag Icon ([Web](https://github.com/git-visor/web-app/pull/28), [Electron](https://github.com/git-visor/desktop-app/pull/23)), [Optimised Layout] (https://github.com/git-visor/web-app/pull/30)
+- Added features: Show Line by Line Diff in Commit ([Web](https://github.com/git-visor/web-app/pull/29), [Electron](https://github.com/git-visor/desktop-app/pull/24))
+- Release [v0.2](https://github.com/git-visor/desktop-app/releases/tag/v0.2-tested)
+
+## Week 10
+- Fix Bugs: Fix Filter Objects Bug ([Web](https://github.com/git-visor/web-app/pull/40), [Electron](https://github.com/git-visor/desktop-app/pull/33))
+- Fix up codebase: https://github.com/git-visor/desktop-app/pull/28, https://github.com/git-visor/desktop-app/pull/29
+- Update UI: Add Icon ([Web](https://github.com/git-visor/web-app/pull/37), [Electron](https://github.com/git-visor/desktop-app/pull/30)), Move Commit Label to Side ([Web](https://github.com/git-visor/web-app/pull/38), [Electron](https://github.com/git-visor/desktop-app/pull/31))
+- Added features: Handle Branches ([Web](https://github.com/git-visor/web-app/pull/39), [Electron](https://github.com/git-visor/desktop-app/pull/32))
+- [Make Markbind Page for Documentation](https://github.com/git-visor/git-visor.github.io)
+- [Add Mac OS Testing on CI/CD](https://github.com/git-visor/desktop-app/pull/35)
+- [Move project to git-visor organization](https://github.com/git-visor)
+
+## Week 11
+- Clean Up Codebase and Update Readme ([Web](https://github.com/git-visor/web-app/pull/43), [Electron](https://github.com/git-visor/desktop-app/pull/34))
+- Added features: [Handle Packed Objects](https://github.com/git-visor/desktop-app/pull/41), Report Bug ([Web](https://github.com/git-visor/web-app/pull/48), [Electron](https://github.com/git-visor/desktop-app/pull/37))
+- Release [v1.0.0](https://github.com/git-visor/desktop-app/releases/tag/v1.0)
+
+## Week 12
+- Fix Bugs: Fix Filter Objects Count to be Dependent on Branch ([Web](https://github.com/git-visor/web-app/pull/53), [Electron](https://github.com/git-visor/desktop-app/pull/42)), Fix Commit Sort Order to be Based on Parents Instead of Commit Time ([Web](https://github.com/git-visor/web-app/pull/56), [Electron](https://github.com/git-visor/desktop-app/pull/44)), [Fix Load Url Timing Issue] (https://github.com/git-visor/web-app/pull/55)
+- Release [v1.0.1](https://github.com/git-visor/desktop-app/releases/tag/v1.0.1)
+
+## Week 13
+- Update UI: Improve Layout ([Web](https://github.com/git-visor/web-app/pull/64), [Electron](https://github.com/git-visor/desktop-app/pull/50))
+- Fix Bugs: [Fix Refresh Bug](https://github.com/git-visor/desktop-app/pull/51), [Fix Unable to Select Repo When Loading From Url](https://github.com/git-visor/web-app/pull/65)
+- Added features: [Add File Adding Example](https://github.com/git-visor/web-app/pull/60)
+- [Add Tests](https://github.com/git-visor/desktop-app/pull/52)

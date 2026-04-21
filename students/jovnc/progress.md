@@ -7,7 +7,9 @@
 - **Pre-commit Tooling**: Proposed and implemented Git hooks via LeftHook across the exercises and app repositories ([#265](https://github.com/git-mastery/exercises/pull/265), [#76](https://github.com/git-mastery/app/pull/76))
 - **Exercise Development**: Implemented and improved verify logic for multiple exercises (mix-messy-graph, mix-messy-docs, remote-branch-rename, branch-forward)
 - **Developer Documentation**: Restructured developer documentation ([#6](https://github.com/git-mastery/developers/pull/6)), wrote onboarding docs, and added `AGENTS.md`
-- **Bug Fixes**: Fixed critical bugs including progress sync failures, help command truncation, Arch Linux release URL, and OneDrive FileNotFound incident
+- **Security & Repo Governance**: Hardened main branch settings, set up CodeQL for static analysis, and added CODEOWNERS ([#116](https://github.com/git-mastery/app/issues/116), [#117](https://github.com/git-mastery/app/pull/117))
+- **Contributor Experience**: Added CONTRIBUTING.md, all-contributors support, automated contributor tracking in README, and first contributor comment action across all repositories ([#111](https://github.com/git-mastery/app/pull/111), [#108](https://github.com/git-mastery/app/pull/108), [#126](https://github.com/git-mastery/app/pull/126), [#289](https://github.com/git-mastery/exercises/pull/289))
+- **Bug Fixes**: Fixed critical bugs including progress sync failures, help command truncation, Arch Linux release URL, OneDrive FileNotFound incident, REPL type errors, and E2E test flakiness ([#106](https://github.com/git-mastery/app/pull/106), [#112](https://github.com/git-mastery/app/pull/112))
 - And more! See the weekly log below for a comprehensive list of contributions.
 
 ---
@@ -137,8 +139,31 @@
   - Restructure and update developer documentation ([#6](https://github.com/git-mastery/developers/pull/6))
   - Update publish pypi library to use uv ([#6](https://github.com/git-mastery/actions/pull/6))
 
+### Week 12
+
+- Reviewed PRs: [#4](https://github.com/git-mastery/difflib-parser/pull/4), [#95](https://github.com/git-mastery/app/pull/95), [#97](https://github.com/git-mastery/app/pull/97), [#103](https://github.com/git-mastery/app/pull/103), [#104](https://github.com/git-mastery/app/pull/104), [#2](https://github.com/git-mastery/educator-progress-dashboard/pull/2), [#285](https://github.com/git-mastery/exercises/pull/285)
+- Implemented PRs:
+  - Refactor GH_TOKEN setup in workflows for clarity and maintainability ([#99](https://github.com/git-mastery/app/pull/99))
+  - Fix REPL type errors and handle empty / ([#106](https://github.com/git-mastery/app/pull/106))
+  - Update README.md and add contributors automatically ([#108](https://github.com/git-mastery/app/pull/108))
+  - Add CONTRIBUTING.md and all-contributors support ([#111](https://github.com/git-mastery/app/pull/111))
+  - Retry clone if fail after fork to fix E2E test flakiness ([#112](https://github.com/git-mastery/app/pull/112))
+  - Hardening of main branch settings + set up CodeQL ([#116](https://github.com/git-mastery/app/issues/116))
+  - Add CODEOWNERS ([#117](https://github.com/git-mastery/app/pull/117))
+
+### Week 13
+
+- Reviewed PRs: [#34](https://github.com/git-mastery/git-autograder/pull/34), [#125](https://github.com/git-mastery/app/pull/125), [#123](https://github.com/git-mastery/app/pull/123), [#124](https://github.com/git-mastery/app/pull/124), [#122](https://github.com/git-mastery/app/pull/122), [#121](https://github.com/git-mastery/app/pull/121), [#284](https://github.com/git-mastery/exercises/pull/284), [#75](https://github.com/git-mastery/app/pull/75), [#5](https://github.com/git-mastery/actions/pull/5), [#85](https://github.com/git-mastery/app/pull/85), [#26](https://github.com/git-mastery/repo-smith/pull/26), [#27](https://github.com/git-mastery/repo-smith/pull/27)
+- Implemented PRs:
+  - Add first contributor comment action in all repositories ([#7](https://github.com/git-mastery/actions/pull/7), [#126](https://github.com/git-mastery/app/pull/126), [#289](https://github.com/git-mastery/exercises/pull/289), [#6](https://github.com/git-mastery/difflib-parser/pull/6), [#33](https://github.com/git-mastery/git-autograder/pull/33))
+  - Fix publish error in PyPI ([#8](https://github.com/git-mastery/actions/pull/8), [#9](https://github.com/git-mastery/actions/pull/9))
+  - Publish latest git-autograder and reposmith dependencies ([#35](https://github.com/git-mastery/git-autograder/pull/35), [#36](https://github.com/git-mastery/git-autograder/pull/36), [#127](https://github.com/git-mastery/app/pull/127), [#290](https://github.com/git-mastery/exercises/pull/290))
+- Issues created:
+  - [#29](https://github.com/git-mastery/repo-smith/issues/29), [#30](https://github.com/git-mastery/repo-smith/issues/30)
+
 ## Misc
 
 - [Vibe Coding an App](https://docs.google.com/document/d/1lkt77dtJwEmgs9pRUB1wTd2rj8HiE-I5RNihyPNzDCc/edit?tab=t.0#heading=h.56d739jgyert)
 - [Test Drive adding AI to iP](https://github.com/se-edu/guides/issues/190)
 - [CSV Text Classifier](https://drive.google.com/drive/u/3/folders/14MJf8G1SOAYBnTzU7Z575gZ0tPuHiEGI)
+- [Test-drive the tutorial on using a local LLM in a Java project](https://github.com/se-edu/guides/issues/195)

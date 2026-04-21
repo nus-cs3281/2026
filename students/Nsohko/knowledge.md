@@ -57,3 +57,53 @@ Learned how to quickly prototype AI-enabled product ideas by combining LLM APIs 
   Gained experience turning simple ideas into working prototypes using AI components.
 - OpenAI API documentation  
   Provided the technical basis for implementing these features correctly.
+
+### RAG Pipeline Design
+
+Learned the fundamentals of RAG pipeline design, especially how retrieval quality, chunking strategy, and context construction affect the usefulness of AI-assisted workflows built on top of existing systems.
+
+**Resources used:**
+- OpenAI API documentation and general LLM development references  
+  Helped me understand how retrieval and generation work together in practical applications.
+- Hands-on experimentation  
+  Built intuition for how document structure and retrieved context affect output quality.
+
+### OAuth / OIDC Integration
+
+Learned more about OAuth and OIDC integration, including how authentication and identity claims should be modeled in a provider-agnostic way instead of tightly coupling application logic to one login provider.
+
+**Resources used:**
+- Real project work on account identity design  
+  Helped me understand the limitations of provider-specific identifiers and the benefits of more flexible identity modeling.
+- Official references and ecosystem documentation  
+  Provided context on how provider subject identifiers are used in modern authentication flows.
+
+### Schema Evolution and Data Migration
+
+Learned how to approach schema evolution and data migration more safely, especially when refactoring entities, preserving compatibility, and rolling out changes incrementally across a large codebase.
+
+**Resources used:**
+- TEAMMATES migration-related tasks  
+  Provided hands-on experience with entity changes, migration scripts, and compatibility concerns.
+- Practical debugging and testing work  
+  Reinforced the importance of validating migration behaviour carefully before rollout.
+
+### Build and CI Tooling
+
+Learned more about build and CI tooling by debugging Gradle and GitHub Actions issues, and by improving automation scripts so they are easier to maintain and extend over time.
+
+**Resources used:**
+- Hands-on work with Gradle and GitHub Actions  
+  Helped me understand how build tooling changes can affect developer workflows and CI stability.
+- Official tool documentation  
+  Used to trace version compatibility issues and update workflow implementations correctly.
+
+### Resilient Testing and Environment-Independent Design
+
+Learned the importance of making tests and supporting infrastructure resilient, especially around transaction cleanup, time-sensitive fixtures, and reducing environment-specific assumptions that can cause flaky failures.
+
+**Resources used:**
+- Integration test debugging  
+  Showed how small cleanup and fixture issues can cascade into larger test failures.
+- Work on decoupling from GAE-specific behaviour  
+  Reinforced the value of making systems more portable and predictable across environments.
