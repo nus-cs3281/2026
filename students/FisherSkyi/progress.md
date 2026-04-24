@@ -11,4 +11,6 @@
 | 8 | **Reposense:** Self-host RepoSense and create docker file for it <br> **Agentic SE:** First presentation on MCP to group|
 | 9 | **Reposense:** PR: [#2556](https://github.com/reposense/RepoSense/pull/2556) [Add scrollble button] [#2559](https://github.com/reposense/RepoSense/pull/2559) <br> **Agentic SE:** Second iteration of Talk on MCP. Pre-recorded video on presentation. Built basic MCP server and client |
 | 10 | **Reposense:** PR: [#2556](https://github.com/reposense/RepoSense/pull/2556) [Do a [major refactor](https://github.com/reposense/RepoSense/pull/2556#issuecomment-4153235772) to adopt observer pattern design; Prepare for teach-back on MCP] [#2561](https://github.com/reposense/RepoSense/pull/2561) [#2563](https://github.com/reposense/RepoSense/pull/2563) <br> **Agentic SE:** Adopt MCP talk from NUS Hacker & Notion to refactor my talk |
-| 11 | |
+| 11 | **Agentic SE:** Prepare for MCP talk |
+| 12 | **RepoSense:** Draft the release <br> **Agentic SE:** Final presentation on MCP |
+| 13 | **Reposense:** Release [v5.0](https://github.com/reposense/RepoSense/releases/tag/v5.0) |
