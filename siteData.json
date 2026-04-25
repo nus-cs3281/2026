@@ -397,7 +397,9 @@
       "src": "students/SAN-MUYUN/knowledge.md",
       "headings": {
         "contextmanager": "ContextManager",
-        "utilising-codex-for-coding": "Utilising Codex for coding"
+        "utilising-codex-for-coding": "Utilising Codex for coding",
+        "github-actions": "GitHub Actions",
+        "ai-agent-orchestration": "AI Agent Orchestration"
       },
       "headingKeywords": {}
     },
@@ -715,6 +717,8 @@
         "san-muyun": "SAN MUYUN",
         "contextmanager": "ContextManager",
         "utilising-codex-for-coding": "Utilising Codex for coding",
+        "github-actions-2": "GitHub Actions",
+        "ai-agent-orchestration": "AI Agent Orchestration",
         "markbind": "MarkBind",
         "chua-jia-chen-thaddaeus": "CHUA JIA CHEN THADDAEUS",
         "github-copilot-3": "GitHub Copilot",
@@ -781,7 +785,7 @@
         "ai-coding-tools-2": "AI Coding Tools",
         "terminal-uis": "Terminal UIs",
         "yaml-files": ".yaml files",
-        "github-actions-2": "GitHub Actions",
+        "github-actions-3": "GitHub Actions",
         "calling-llms-in-programs": "Calling LLMs in Programs",
         "github-worktrees": "GitHub Worktrees",
         "java-packages": "Java Packages",
@@ -807,7 +811,7 @@
         "github-copilot-and-agentic-coding-in-general": "GitHub Copilot (and agentic coding in general)",
         "google-cloud-platform-gcp": "Google Cloud Platform (GCP)",
         "openid-connect-authentication": "OpenID Connect Authentication",
-        "github-actions-3": "GitHub Actions",
+        "github-actions-4": "GitHub Actions",
         "json-handling-in-java": "JSON Handling in Java",
         "unit-testing": "Unit Testing",
         "koh-wee-jean": "KOH WEE JEAN",
