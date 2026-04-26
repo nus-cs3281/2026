@@ -1,3 +1,45 @@
+## Table of content
+
+<!--toc:start-->
+- [AI Coding Tools](#ai-coding-tools)
+  - [Skills](#skills)
+    - [Developing AI Skills](#developing-ai-skills)
+    - [Version controlling AI skills](#version-controlling-ai-skills)
+    - [Distributing AI skills](#distributing-ai-skills)
+  - [Subagents](#subagents)
+  - [List of tools experimented with](#list-of-tools-experimented-with)
+- [Vue](#vue)
+  - [Reactivity (Vue 3)](#reactivity-vue-3)
+  - [Templates and slots](#templates-and-slots)
+  - [Other frameworks/meta-frameworks](#other-frameworksmeta-frameworks)
+- [TypeScript migration](#typescript-migration)
+  - [`tsc`](#tsc)
+- [PDF generation for MarkBind sites](#pdf-generation-for-markbind-sites)
+  - [Applications](#applications)
+  - [Experimentation](#experimentation)
+  - [Challenges](#challenges)
+    - [Solved (i think)](#solved-i-think)
+      - [Page order when merging](#page-order-when-merging)
+      - [Hidden elementes](#hidden-elementes)
+    - [Outstanding issues](#outstanding-issues)
+      - [Big dependency/bundle size](#big-dependencybundle-size)
+      - [iframes rendering](#iframes-rendering)
+- [Adding dark mode support to MarkBind sites](#adding-dark-mode-support-to-markbind-sites)
+  - ["Old school" HTML/CSS/JS](#old-school-htmlcssjs)
+  - [CSS scoping with global selectors](#css-scoping-with-global-selectors)
+  - [CSS variables for theming](#css-variables-for-theming)
+  - [Design decisions and trade-offs](#design-decisions-and-trade-offs)
+  - [Template value injection into JS (security)](#template-value-injection-into-js-security)
+- [CLI Development](#cli-development)
+  - [Interactive prompts](#interactive-prompts)
+  - [Version control for AI skills](#version-control-for-ai-skills)
+- [TypeScript Patterns](#typescript-patterns)
+  - [Module augmentation for patched packages](#module-augmentation-for-patched-packages)
+  - [`import type` for pure type imports](#import-type-for-pure-type-imports)
+  - [CJS require hack in ESM](#cjs-require-hack-in-esm)
+  - [Widening parameter types](#widening-parameter-types)
+<!--toc:end-->
+
 ## AI Coding Tools
 
 ### Skills
@@ -170,7 +212,7 @@ I decided to leverage on that and use a headless browser (Puppeteer) to render t
 
 I just found out that there's a `<mark>` component in HTML
 
-### Old school HTML/CSS/JS
+### "Old school" HTML/CSS/JS
 
 In implementing dark mode, I had to inject a script into page.njk which serves
 as the template for every page rendered in markbind. To do that, I added a
@@ -194,6 +236,15 @@ variables (e.g., `var(--bs-body-bg)`) that automatically adapt to the theme,
 ensuring consistent theming across components and maintenability. However, to
 preserve some custom styles, I had to override some variables in the dark mode context (e.g.,
 `[data-bs-theme="dark"]`) to ensure the colors look good in dark mode.
+
+### Design decisions and trade-offs
+
+Implementing dark mode support introduced a lot of complexity, considering the
+amount of existing content and styles in MarkBind, especially user defined
+components and diagrams. Therefore, significant thought has to be put into the
+design and implementations of the dark mode to ensure minimal friction required
+for users to adopt it, while also ensuring the implementation is maintainable and
+does not introduce too much technical debt.
 
 ### Template value injection into JS (security)
 
