@@ -54,7 +54,7 @@ study this [skill](https://skills.sh/anthropics/skills/skill-creator) meant to t
 
 Some notable points include:
 
-<box type="tip" header="#### Key Principles for AI Skills">
+<box type="tip" header="Key Principles for AI Skills">
 
 - Do not teach AI general knowledges or concepts that it should already know. It
   wastes context and may cause confusion, degrading the performance and
@@ -71,7 +71,7 @@ Some notable points include:
 
 </box>
 
-<box type="important" header="#### Most Important">
+<box type="important" header="Most Important">
 
 Most importantly: test the skill if they work, and pick up quirks/issues
 introduced by the skills and tweak your files to improve them. Make sure you run
@@ -79,7 +79,7 @@ your AI coding tool's debug mode to see if the skills are being picked up.
 
 </box>
 
-<box type="info" header="#### Meta: Skills in action">
+<box type="info" header="Meta: Skills in action">
 
 This knowledge page and the [progress page](progress.md) were formatted using
 [MarkBind skills v0.1.0](https://github.com/MarkBind/skills) with OpenCode using
@@ -138,7 +138,7 @@ specified in `markbind-cli`'s `package.json`.
 
 Created subagents to handle specific tasks such as writing unit tests, generating documentation, and refactoring code.
 
-<box type="info" header="## Useful Tips">
+<box type="info" header="Useful Tips">
 
 - customizing the subagents to use specific models to balance the cost, speed
 and intelligence.
@@ -198,7 +198,7 @@ Useful for creating reusable components with flexible content, especially in the
 
 Learned to use the TypeScript compiler (`tsc`) to check for type errors and compile TypeScript code to JavaScript.
 
-<box type="info" header="#### Useful `tsc` configs/flags">
+<box type="info" header="Useful `tsc` configs/flags">
 
 - `outDir`: specifies the output directory for compiled JavaScript files.
 - module: Set to ES2020, ESNext, or CommonJS to
@@ -258,7 +258,7 @@ I decided to leverage on that and use a headless browser (Puppeteer) to render t
 
 ### Challenges
 
-<panel type="seamless" header="### Solved (I think)" expanded>
+<panel type="seamless" header="Solved (I think)" expanded>
 
 ##### Page order when merging
 
@@ -281,7 +281,7 @@ I decided to leverage on that and use a headless browser (Puppeteer) to render t
 
 </panel>
 
-<panel type="seamless" header="### Outstanding issues" minimized>
+<panel type="seamless" header="Outstanding issues" minimized>
 
 ##### Big dependency/bundle size
 
@@ -312,7 +312,7 @@ data-bs-theme="dark" attribute to the <html> element where applicable.
 
 When adding dark mode styles inside `<style scoped>` Vue components, CSS scoping
 transforms selectors and breaks global attribute selectors like `[data-bs-theme="dark"]`.
-<box type="warning" header="## Solutions">
+<box type="warning" header="Solutions">
 
 - Use `:global([data-bs-theme="dark"])` or `::deep()` for global ancestor selectors
 - Or move global rules to an unscoped `<style>` block
@@ -326,7 +326,7 @@ To implement dark mode, I replaced hardcoded color values with bootstrap CSS
 variables (e.g., `var(--bs-body-bg)`) that automatically adapt to the theme,
 ensuring consistent theming across components and maintenability.
 
-<box type="info" header="## Dark Mode Context Overrides">
+<box type="info" header="Dark Mode Context Overrides">
 
 To preserve some custom styles, I had to override some variables in the dark mode context (e.g.,
 `[data-bs-theme="dark"]`) to ensure the colors look good in dark mode.
@@ -344,7 +344,7 @@ does not introduce too much technical debt.
 
 ### Template value injection into JS (security)
 
-<box type="warning" header="## Security: Template Value Injection into JS">
+<box type="warning" header="Security: Template Value Injection into JS">
 
 Nunjucks template variables embedded directly into JS strings (e.g., `const theme = '{{ codeTheme }}'`)
 can break the script or introduce injection if the value contains quotes or `</script>`.
