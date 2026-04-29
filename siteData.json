@@ -150,8 +150,8 @@
     {
       "src": "students/DhiraPT/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "tool-technology-1-asynchronous-processing-and-amp-job-scheduling-architectures-in-java": "Tool/Technology 1: Asynchronous Processing &amp; Job Scheduling Architectures in Java",
+        "tool-technology-2-ai-assisted-development-and-amp-coding-agents": "Tool/Technology 2: AI-Assisted Development &amp; Coding Agents"
       },
       "headingKeywords": {}
     },
