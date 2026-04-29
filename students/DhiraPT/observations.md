@@ -26,8 +26,6 @@ Contributing to a project of Blender's scale provided significant exposure to in
 - **Blender Developer Documentation:** https://developer.blender.org/docs/
 - **Blender Chat (Element / Matrix)**: Used for real-time communication with core developers. https://chat.blender.org/
 
-Here is a summary of your contributions tailored for a portfolio or project report, structured similarly to the Blender report but focused on your work with mini-sglang.
-
 ---
 
 ### Project: mini-sglang
