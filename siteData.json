@@ -158,9 +158,12 @@
     {
       "src": "students/DhiraPT/observations.md",
       "headings": {
-        "project-foo": "Project: Foo",
+        "project-blender": "Project: Blender",
         "my-contributions": "My Contributions",
-        "my-learning-record": "My Learning Record"
+        "my-learning-record": "My Learning Record",
+        "project-mini-sglang": "Project: mini-sglang",
+        "my-contributions-2": "My Contributions",
+        "my-learning-record-2": "My Learning Record"
       },
       "headingKeywords": {}
     },
@@ -937,9 +940,12 @@
         "my-contributions-6": "My Contributions",
         "my-learning-record-4": "My Learning Record",
         "dhiraputta-pathama-tengara": "DHIRAPUTTA PATHAMA TENGARA",
-        "project-foo-5": "Project: Foo",
+        "project-blender": "Project: Blender",
         "my-contributions-7": "My Contributions",
-        "my-learning-record-5": "My Learning Record"
+        "my-learning-record-5": "My Learning Record",
+        "project-mini-sglang": "Project: mini-sglang",
+        "my-contributions-8": "My Contributions",
+        "my-learning-record-6": "My Learning Record"
       },
       "headingKeywords": {}
     },
