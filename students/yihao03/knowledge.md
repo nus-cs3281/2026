@@ -1,12 +1,177 @@
+## Table of content
+
+<!--toc:start-->
+- [AI Coding Tools](#ai-coding-tools)
+  - [Skills](#skills)
+    - [Developing AI Skills](#developing-ai-skills)
+    - [Version controlling AI skills](#version-controlling-ai-skills)
+    - [Distributing AI skills](#distributing-ai-skills)
+  - [Subagents](#subagents)
+  - [List of tools experimented with](#list-of-tools-experimented-with)
+- [Vue](#vue)
+  - [Reactivity (Vue 3)](#reactivity-vue-3)
+  - [Templates and slots](#templates-and-slots)
+  - [Other frameworks/meta-frameworks](#other-frameworksmeta-frameworks)
+- [TypeScript migration](#typescript-migration)
+  - [`tsc`](#tsc)
+- [PDF generation for MarkBind sites](#pdf-generation-for-markbind-sites)
+  - [Applications](#applications)
+  - [Experimentation](#experimentation)
+  - [Challenges](#challenges)
+    - [Solved (i think)](#solved-i-think)
+      - [Page order when merging](#page-order-when-merging)
+      - [Hidden elementes](#hidden-elementes)
+    - [Outstanding issues](#outstanding-issues)
+      - [Big dependency/bundle size](#big-dependencybundle-size)
+      - [iframes rendering](#iframes-rendering)
+- [Adding dark mode support to MarkBind sites](#adding-dark-mode-support-to-markbind-sites)
+  - ["Old school" HTML/CSS/JS](#old-school-htmlcssjs)
+  - [CSS scoping with global selectors](#css-scoping-with-global-selectors)
+  - [CSS variables for theming](#css-variables-for-theming)
+  - [Design decisions and trade-offs](#design-decisions-and-trade-offs)
+  - [Template value injection into JS (security)](#template-value-injection-into-js-security)
+- [CLI Development](#cli-development)
+  - [Interactive prompts](#interactive-prompts)
+  - [Version control for AI skills](#version-control-for-ai-skills)
+- [TypeScript Patterns](#typescript-patterns)
+  - [Module augmentation for patched packages](#module-augmentation-for-patched-packages)
+  - [`import type` for pure type imports](#import-type-for-pure-type-imports)
+  - [CJS require hack in ESM](#cjs-require-hack-in-esm)
+  - [Widening parameter types](#widening-parameter-types)
+<!--toc:end-->
+
 ## AI Coding Tools
 
 ### Skills
 
 Worked with the team to explore adding repo-specific AI coding skills for common harnesses such as Claude, OpenCode and GitHub Copilot.
 
+#### Developing AI Skills
+
+Learned about good practices for developing AI skills. Generally, the follow the
+guidelines provided by [claude](https://code.claude.com/docs/en/skills) and
+study this [skill](https://skills.sh/anthropics/skills/skill-creator) meant to teach AI agents to create skills.
+
+Some notable points include:
+
+<box type="tip" header="Key Principles for AI Skills">
+
+- Do not teach AI general knowledges or concepts that it should already know. It
+  wastes context and may cause confusion, degrading the performance and
+  increasing token usage.
+- Include project/user specific guard rails that the AI agents should follow,
+  i.e.:
+  - what **NOT** to do (e.g. modify files outside of the project directory, work
+  on untracked files, perform database oeprations, etc.)
+  - what **TO** do (e.g. write unit tests, add comments to code, avoid writing
+  trivial comment to code, etc.)
+  - **HOW** to do things (e.g. common make/npm commands to run, lints etc.)
+- Keep the top level `SKILL.md` concise. Treat it like an index/table of
+  contents, and refer to the other markdown files for detailed instructions and examples.
+
+</box>
+
+<box type="important" header="Most Important">
+
+Most importantly: test the skill if they work, and pick up quirks/issues
+introduced by the skills and tweak your files to improve them. Make sure you run
+your AI coding tool's debug mode to see if the skills are being picked up.
+
+</box>
+
+<box type="info" header="Meta: Skills in action">
+
+This knowledge page and the [progress page](progress.md) were formatted using
+[MarkBind skills v0.1.0](https://github.com/MarkBind/skills) with OpenCode using
+the minimax m2.5 model.
+
+</box>
+
+#### Version controlling AI skills
+
+Why AI skills are useful, they should be treated like code, i.e. it has to be
+maintained. Otherwise, as project evolves, the code architecture or feature set
+may change, and the skills would simply confuse the AI agents and make them do
+wrong things, wasting token and time.
+
+<panel header="Ways to mitigate skill staleness" expanded>
+
+There are a few ways to mitigate this:
+
+1. **Use AI to maintain AI**  
+   - Create a subagent that periodically reviews the skill files and updates them based on the current state of the codebase and project requirements.
+   - This could be done before PRs are merged, before each releases, or on a
+    regular schedule
+   - could be automated using GitHub Actions
+   - This way, the skills can evolve with the project without requiring manual updates.
+2. **Enforce skill updates in PRs**  
+   - Make it a requirement for developers to review and update the AI skills whenever they make significant changes to the codebase.
+   - This can be enforced through code review checklists or automated checks that flag outdated skills based on code changes.
+
+</panel>
+
+#### Distributing AI skills
+
+when the skills are not part of your own repo, i.e. meant to be shared with
+developers outside of your team, you can publish them to a public registry such
+as a github repository. There are a few ways for user to do this, the most
+common one being
+
+```sh
+npx skills install <organization>/<repo>
+```
+
+provided by `vercel-lab/skills`
+
+<panel header="MarkBind's approach to skill distribution" minimized>
+
+However, for MarkBind, since the skills should be tied to the version of
+MarkBind, we have developed an in house command `markbind skills pull` that
+enforces version control by fetching the skills release according to the version
+specified in `markbind-cli`'s `package.json`.
+
+</panel>
+
+---
+
 ### Subagents
 
 Created subagents to handle specific tasks such as writing unit tests, generating documentation, and refactoring code.
+
+<box type="info" header="Useful Tips">
+
+- customizing the subagents to use specific models to balance the cost, speed
+and intelligence.
+- use the subagents to manage the context window of the main agent.
+
+</box>
+
+### List of tools experimented with
+
+<tabs>
+<tab header="OpenCode">
+
+**My current favourite.** Open source and supports multiple provider,
+has strong ecosystem and plugin support. Works well with Neovim with
+[opencode.nvim](https://github.com/NickvanDyke/opencode.nvim) (the dev is super
+cool too)
+
+</tab>
+
+<tab header="Claude Code">
+
+Also works well, especially with Claude's own model. However,
+the UI is worse than OpenCode and UX is really bad.
+
+</tab>
+
+<tab header="GitHub Copilot">
+
+Works well and has great VSCode integration. However,
+rate-limiting became really bad.
+
+</tab>
+</tabs>
 
 ## Vue
 
@@ -16,17 +181,64 @@ Learned about Vue 3's reactivity system, including `ref`, `reactive`, and `compu
 
 Used `reactive` and `computed` to implement dynamic data tag count in CardStack Component.
 
+### Templates and slots
+
+Learned about Vue's template syntax and slot system for component composition.
+Useful for creating reusable components with flexible content, especially in the context of MarkBind's custom components.
+
+### Other frameworks/meta-frameworks
+
+- Svelte: explored Svelte's reactivity and component model, which uses a compiler to optimize updates.
+- Astro: learned about Astro's island architecture for building static sites with partial hydration.
+- Next.js: explored Next.js's server-side rendering and API routes for building full-stack React applications.
+
 ## TypeScript migration
 
 ### `tsc`
 
 Learned to use the TypeScript compiler (`tsc`) to check for type errors and compile TypeScript code to JavaScript.
 
-Several useful configs/flags learned:
+<box type="info" header="Useful `tsc` configs/flags">
 
-- outDir: specifies the output directory for compiled JavaScript files.
+- `outDir`: specifies the output directory for compiled JavaScript files.
+- module: Set to ES2020, ESNext, or CommonJS to
+control module output format
+- moduleResolution: Use node or node16/nodenext for
+proper ESM resolution
+- esModuleInterop: Enable to allow default imports
+from CommonJS modules
+- allowSyntheticDefaultImports: Complement
+esModuleInterop for synthetic default exports
+- resolveJsonModule: Allow importing JSON files (
+useful for package.json reads)
+- declaration: Generate .d.ts type files for library
+consumers
+- declarationMap: Generate source maps for type files
+
+For pure ESM packages:
+
+- Add "type": "module" to package.json
+- Use .mjs extension or set "type": "module"
+- tsc --module esnext --outDir dist for ESM output
+
+For dual CJS/ESM packages:
+
+- Compile two outputs: one for CJS (CommonJS), one
+for ESM (ESNext)
+- Use package.json exports field with conditional
+paths:
+    exports: {
+    import: ./dist/esm/index.js,
+    require: ./dist/cjs/index.js
+  }
+
+Sometimes it is necessary to create a `tsconfig.json` for your LSP to work properly.
+
+</box>
 
 ## PDF generation for MarkBind sites
+
+For those who wants to try it out: <https://github.com/yihao03/markbind/tree/feature/export-pdf>
 
 When making my own course notes with MarkBind, I realised a need to export the entire site to pdf file so that
 it could be printed and brought to exams, and distribute easily in general. That's why I started exploring the idea
@@ -42,11 +254,11 @@ of creating a `@/packages/core-pdf` module that achieves this goal.
 ### Experimentation
 
 Considering MarkBind already creates a static site with proper formatting, with appropriate CSS for media print,
-I decided to leverage on that and use a headless browser to render the site and print it to pdf.
+I decided to leverage on that and use a headless browser (Puppeteer) to render the site and print it to pdf.
 
 ### Challenges
 
-#### Solved (i think)
+<panel type="seamless" header="Solved (I think)" expanded>
 
 ##### Page order when merging
 
@@ -56,13 +268,20 @@ I decided to leverage on that and use a headless browser to render the site and 
   - Parse the `.html` pages to extract the `<site-nav>` structure, which contains the correct page order.
   - Use the extracted page order to merge the individual pdfs in the correct sequence.
 
+**Possible extension**:
+
+- Create a plugin that injexts the prev page and next page links into the pages
+  rather than having to define them manually in each page.
+
 ##### Hidden elementes
 
 - Some elements (e.g. panels) can be collapsed by default and thus hidden when rendered, which may lead to missing content in the generated pdf.
 - Implemented solution:
   - Inject javascript into the rendered page to expand all collapsible elements before printing to pdf, ensuring all content is included in the final output.
 
-#### Outstanding issues
+</panel>
+
+<panel type="seamless" header="Outstanding issues" minimized>
 
 ##### Big dependency/bundle size
 
@@ -76,31 +295,62 @@ I decided to leverage on that and use a headless browser to render the site and 
   the placeholder instead
 - Attempted solution: use Puppeteer to take a screenshot of the iframe and inject that into the page. I can't get it to work though
 
+</panel>
+
 ## Adding dark mode support to MarkBind sites
 
 I just found out that there's a `<mark>` component in HTML
 
-### Old school HTML/CSS/JS
+### "Old school" HTML/CSS/JS
 
 In implementing dark mode, I had to inject a script into page.njk which serves
 as the template for every page rendered in markbind. To do that, I added a
-<script> section to read system's theme preference and add a
+`<script>` section to read system's theme preference and add a
 data-bs-theme="dark" attribute to the <html> element where applicable.
 
 ### CSS scoping with global selectors
 
 When adding dark mode styles inside `<style scoped>` Vue components, CSS scoping
 transforms selectors and breaks global attribute selectors like `[data-bs-theme="dark"]`.
-Solutions:
+<box type="warning" header="Solutions">
+
 - Use `:global([data-bs-theme="dark"])` or `::deep()` for global ancestor selectors
 - Or move global rules to an unscoped `<style>` block
 - Bootstrap 5.3 uses `data-bs-theme="dark"` on `<html>` for theming
 
+</box>
+
+### CSS variables for theming
+
+To implement dark mode, I replaced hardcoded color values with bootstrap CSS
+variables (e.g., `var(--bs-body-bg)`) that automatically adapt to the theme,
+ensuring consistent theming across components and maintenability.
+
+<box type="info" header="Dark Mode Context Overrides">
+
+To preserve some custom styles, I had to override some variables in the dark mode context (e.g.,
+`[data-bs-theme="dark"]`) to ensure the colors look good in dark mode.
+
+</box>
+
+### Design decisions and trade-offs
+
+Implementing dark mode support introduced a lot of complexity, considering the
+amount of existing content and styles in MarkBind, especially user defined
+components and diagrams. Therefore, significant thought has to be put into the
+design and implementations of the dark mode to ensure minimal friction required
+for users to adopt it, while also ensuring the implementation is maintainable and
+does not introduce too much technical debt.
+
 ### Template value injection into JS (security)
+
+<box type="warning" header="Security: Template Value Injection into JS">
 
 Nunjucks template variables embedded directly into JS strings (e.g., `const theme = '{{ codeTheme }}'`)
 can break the script or introduce injection if the value contains quotes or `</script>`.
 Must serialize/escape as JSON before injecting template values into JS.
+
+</box>
 
 ## CLI Development
 
@@ -117,33 +367,41 @@ The version is compared against `package.json`'s `aiSkillsVersion` to prompt use
 
 ## TypeScript Patterns
 
-### Module augmentation for patched packages
+<panel header="Module augmentation for patched packages" minimized>
 
 When patching third-party packages (nunjucks, htmlparser2, markdown-it), use `declare module`
 to add types for augmented modules. For packages with internal sub-modules not exposed in
 their types, create ambient declarations (e.g., `nunjucks-submodules.d.ts`).
 
-### `import type` for pure type imports
+</panel>
+
+<panel header="import type for pure type imports" minimized>
 
 Use `import type { X } from 'y'` for types-only imports to improve compile performance and
 clarify intent.
 
-### CJS require hack in ESM
+</panel>
+
+<panel header="CJS require hack in ESM" expanded>
 
 ESM imports are read-only namespaces, so prototype monkey-patching on imported modules won't work.
 The workaround is using `require('module/path')` from `node:module` to get a mutable CommonJS
 object while using `import type` for development-time type safety. This creates technical debt
 and may break if the package shifts to pure ESM output.
 
-### Widening parameter types
+When `require` is not natively available in ESM, we can use `createRequire` to create a CommonJS `require` function:
+
+```ts
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const nunjucks = require('nunjucks');
+```
+
+</panel>
+
+<panel header="Widening parameter types" minimized>
 
 Prefer `Iterable<T>` over `T[]` for function parameters when the function only iterates,
 to accept Sets, generators, and other iterables without forcing array conversions downstream.
 
-## GitHub API / Deployment
-
-### Parsing Git remote URLs
-
-When parsing GitHub remote URLs to construct deployment URLs:
-- Strip trailing `.git` only when present: `repoSegment.endsWith('.git') ? repoSegment.slice(0, -4) : repoSegment`
-- Using `substring(0, lastIndexOf('.'))` fails for URLs without `.git` (empty repo name) or repos with dots in names
+</panel>
