@@ -262,8 +262,14 @@
     {
       "src": "students/MadLamprey/knowledge.md",
       "headings": {
-        "tool-technology-1": "Tool/Technology 1",
-        "tool-technology-2": "Tool/Technology 2"
+        "langchain4j": "Langchain4j",
+        "local-llm-inference-jlama-llama-cpp-ollama": "Local LLM Inference (JLama, llama.cpp, Ollama)",
+        "github-actions-for-ci-driven-ai-tooling": "GitHub Actions for CI-Driven AI Tooling",
+        "openai-codex": "OpenAI Codex",
+        "agentic-design": "Agentic Design",
+        "prompt-engineering": "Prompt Engineering",
+        "building-an-ai-code-reviewer": "Building an AI Code Reviewer",
+        "pedagogical-design-as-an-engineering-constraint": "Pedagogical Design as an Engineering Constraint"
       },
       "headingKeywords": {}
     },
@@ -278,7 +284,10 @@
     },
     {
       "src": "students/MadLamprey/progress.md",
-      "headings": {},
+      "headings": {
+        "summary": "Summary",
+        "lead-and-amp-technical-contributions": "Lead &amp; Technical Contributions"
+      },
       "headingKeywords": {}
     },
     {
